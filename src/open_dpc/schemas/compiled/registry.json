@@ -1,0 +1,140 @@
+{
+  "registry_version": "1",
+  "schemas": [
+    {
+      "base": "base/legacy-mixed-v1.json",
+      "compatible_input_years": [],
+      "id": "legacy-mixed-v1",
+      "year": null
+    },
+    {
+      "base": "base/2014.json",
+      "compatible_input_years": [],
+      "effective_from": "20140401",
+      "effective_to": "20150331",
+      "id": "dpc-2014-20140501",
+      "year": 2014
+    },
+    {
+      "base": "base/2015.json",
+      "compatible_input_years": [],
+      "effective_from": "20150401",
+      "effective_to": "20160331",
+      "id": "dpc-2015-20150402",
+      "year": 2015
+    },
+    {
+      "base": "base/2016.json",
+      "compatible_input_years": [],
+      "effective_from": "20160401",
+      "effective_to": "20170331",
+      "id": "dpc-2016-20160401",
+      "year": 2016
+    },
+    {
+      "base": "base/2017.json",
+      "compatible_input_years": [],
+      "effective_from": "20170401",
+      "effective_to": "20180331",
+      "id": "dpc-2017-20170401",
+      "year": 2017
+    },
+    {
+      "base": "base/2018.json",
+      "compatible_input_years": [],
+      "effective_from": "20180401",
+      "effective_to": "20190331",
+      "id": "dpc-2018-20180406",
+      "year": 2018
+    },
+    {
+      "base": "base/2019.json",
+      "compatible_input_years": [],
+      "effective_from": "20190401",
+      "effective_to": "20200331",
+      "id": "dpc-2019-20190401",
+      "year": 2019
+    },
+    {
+      "base": "base/2020.json",
+      "compatible_input_years": [],
+      "effective_from": "20200401",
+      "effective_to": "20210331",
+      "id": "dpc-2020-20200330",
+      "year": 2020
+    },
+    {
+      "base": "base/2021.json",
+      "compatible_input_years": [],
+      "effective_from": "20210401",
+      "effective_to": "20220331",
+      "id": "dpc-2021-20210401",
+      "year": 2021
+    },
+    {
+      "base": "base/2022.json",
+      "compatible_input_years": [],
+      "effective_from": "20220401",
+      "effective_to": "20230331",
+      "id": "dpc-2022-20220401",
+      "year": 2022
+    },
+    {
+      "base": "base/2023.json",
+      "compatible_input_years": [],
+      "effective_from": "20230401",
+      "effective_to": "20240331",
+      "id": "dpc-2023-20230401",
+      "year": 2023
+    },
+    {
+      "compatible_input_years": [],
+      "delta": "changes/2024-20240401.json",
+      "effective_from": "20240401",
+      "effective_to": "20240531",
+      "id": "dpc-2024-20240401",
+      "year": 2024
+    },
+    {
+      "base": "base/2024-20240601.json",
+      "compatible_input_years": [],
+      "effective_from": "20240601",
+      "effective_to": "20250331",
+      "id": "dpc-2024-20240601",
+      "year": 2024
+    },
+    {
+      "base": "base/2025.json",
+      "compatible_input_years": [],
+      "effective_from": "20250401",
+      "effective_to": "20260331",
+      "id": "dpc-2025-20250530",
+      "year": 2025
+    },
+    {
+      "compatible_input_years": [],
+      "delta": "changes/2026-20260401.json",
+      "effective_from": "20260401",
+      "effective_to": "20260531",
+      "id": "dpc-2026-20260401",
+      "year": 2026
+    },
+    {
+      "compatible_input_years": [],
+      "delta": "changes/2026.json",
+      "effective_from": "20260601",
+      "effective_to": "20270331",
+      "id": "dpc-2026-20260601",
+      "year": 2026
+    },
+    {
+      "compatible_input_years": [],
+      "delta": "changes/2026-20260717.json",
+      "effective_from": "20260601",
+      "effective_to": "20270331",
+      "id": "dpc-2026-20260717",
+      "selectable_by_date": false,
+      "year": 2026
+    }
+  ]
+}

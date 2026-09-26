@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "Cite the software version and schema/definition hashes used; cite the original DPC specification and Quan et al. when applicable."
+title: "Open DPC JP"
+type: software
+version: 0.1.0
+license: MIT
+authors:
+  - family-names: Wada
+    given-names: Shoya
+    orcid: "https://orcid.org/0000-0001-7055-1009"
+references:
+  - type: article
+    title: "Coding algorithms for defining comorbidities in ICD-9-CM and ICD-10 administrative data"
+    doi: "10.1097/01.mlr.0000182534.19832.83"
+    year: 2005

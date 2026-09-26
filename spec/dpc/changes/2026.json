@@ -1,0 +1,1055 @@
+{
+  "base": "dpc-2025-20250530",
+  "changes": [
+    {
+      "op": "set",
+      "path": [
+        "effective_from"
+      ],
+      "value": "20260601"
+    },
+    {
+      "op": "set",
+      "path": [
+        "effective_to"
+      ],
+      "value": "20270331"
+    },
+    {
+      "op": "remove",
+      "path": [
+        "ff1",
+        "codes",
+        "A001020"
+      ]
+    },
+    {
+      "op": "remove",
+      "path": [
+        "ff1",
+        "codes",
+        "A001030"
+      ]
+    },
+    {
+      "op": "remove",
+      "path": [
+        "ff1",
+        "codes",
+        "A006060"
+      ]
+    },
+    {
+      "op": "remove",
+      "path": [
+        "ff1",
+        "codes",
+        "M170030"
+      ]
+    },
+    {
+      "op": "remove",
+      "path": [
+        "ff1",
+        "codes",
+        "M170040"
+      ]
+    },
+    {
+      "op": "remove",
+      "path": [
+        "ff1",
+        "codes",
+        "M170050"
+      ]
+    },
+    {
+      "op": "remove",
+      "path": [
+        "ff1",
+        "codes",
+        "M170060"
+      ]
+    },
+    {
+      "op": "set",
+      "path": [
+        "ff1",
+        "codes",
+        "A000021"
+      ],
+      "value": {
+        "payloads": {
+          "1": {
+            "name": "下り搬送の有無",
+            "type": "string"
+          },
+          "2": {
+            "name": "下り搬送時に使用された車両",
+            "type": "string"
+          }
+        },
+        "version": "20260601"
+      }
+    },
+    {
+      "op": "set",
+      "path": [
+        "ff1",
+        "codes",
+        "A000030",
+        "payloads",
+        "6"
+      ],
+      "value": {
+        "name": "入院前の生活の場への復帰の有無",
+        "type": "string"
+      }
+    },
+    {
+      "op": "set",
+      "path": [
+        "ff1",
+        "codes",
+        "A001050"
+      ],
+      "value": {
+        "payloads": {
+          "2": {
+            "name": "患者の状態等",
+            "type": "string"
+          }
+        },
+        "version": "20260601"
+      }
+    },
+    {
+      "op": "set",
+      "path": [
+        "ff1",
+        "codes",
+        "A004060"
+      ],
+      "value": {
+        "payloads": {
+          "2": {
+            "name": "高次脳機能障害を伴った重症脳血管障害等の有無",
+            "type": "string"
+          }
+        },
+        "version": "20260601"
+      }
+    },
+    {
+      "op": "set",
+      "path": [
+        "ff1",
+        "codes",
+        "ADL0005"
+      ],
+      "value": {
+        "payloads": {
+          "2": {
+            "name": "発症前のADLスコア",
+            "type": "string"
+          }
+        },
+        "version": "20260601"
+      }
+    },
+    {
+      "op": "set",
+      "path": [
+        "ff1",
+        "codes",
+        "M040031",
+        "payloads",
+        "2",
+        "name"
+      ],
+      "value": "空欄"
+    },
+    {
+      "op": "set",
+      "path": [
+        "ff1",
+        "codes",
+        "M040031",
+        "payloads",
+        "3",
+        "name"
+      ],
+      "value": "空欄"
+    },
+    {
+      "op": "set",
+      "path": [
+        "ff1",
+        "codes",
+        "M040031",
+        "payloads",
+        "4",
+        "name"
+      ],
+      "value": "空欄"
+    },
+    {
+      "op": "set",
+      "path": [
+        "ff1",
+        "codes",
+        "M040031",
+        "payloads",
+        "5",
+        "name"
+      ],
+      "value": "空欄"
+    },
+    {
+      "op": "set",
+      "path": [
+        "ff1",
+        "codes",
+        "M050011",
+        "payloads",
+        "3",
+        "name"
+      ],
+      "value": "空欄"
+    },
+    {
+      "op": "set",
+      "path": [
+        "ff1",
+        "codes",
+        "M180020",
+        "payloads",
+        "4",
+        "name"
+      ],
+      "value": "空欄"
+    },
+    {
+      "op": "set",
+      "path": [
+        "ff1",
+        "codes",
+        "M180020",
+        "payloads",
+        "4",
+        "type"
+      ],
+      "value": "string"
+    },
+    {
+      "op": "set",
+      "path": [
+        "ff1",
+        "codes",
+        "M180020",
+        "payloads",
+        "8",
+        "name"
+      ],
+      "value": "空欄"
+    },
+    {
+      "op": "set",
+      "path": [
+        "id"
+      ],
+      "value": "dpc-2026-20260601"
+    },
+    {
+      "op": "set",
+      "path": [
+        "revision"
+      ],
+      "value": "20260325"
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "efg_flags_pdf_page"
+      ],
+      "value": 209
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "efg_layout_pdf_page"
+      ],
+      "value": 214
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "efn_flags_pdf_pages"
+      ],
+      "value": [
+        195,
+        196
+      ]
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "efn_layout_pdf_page"
+      ],
+      "value": 207
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_layout_pdf_page"
+      ],
+      "value": 21
+    },
+    {
+      "op": "remove",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A001020"
+      ]
+    },
+    {
+      "op": "remove",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A001030"
+      ]
+    },
+    {
+      "op": "remove",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A006060"
+      ]
+    },
+    {
+      "op": "remove",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "M170030"
+      ]
+    },
+    {
+      "op": "remove",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "M170040"
+      ]
+    },
+    {
+      "op": "remove",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "M170050"
+      ]
+    },
+    {
+      "op": "remove",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "M170060"
+      ]
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A000010"
+      ],
+      "value": 23
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A000020"
+      ],
+      "value": 23
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A000021"
+      ],
+      "value": 23
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A000030"
+      ],
+      "value": 24
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A000031"
+      ],
+      "value": 24
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A000040"
+      ],
+      "value": 24
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A000050"
+      ],
+      "value": 24
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A000060"
+      ],
+      "value": 24
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A000070"
+      ],
+      "value": 25
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A000080"
+      ],
+      "value": 25
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A000090"
+      ],
+      "value": 25
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A001010"
+      ],
+      "value": 25
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A001040"
+      ],
+      "value": 26
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A001050"
+      ],
+      "value": 26
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A002010"
+      ],
+      "value": 26
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A003010"
+      ],
+      "value": 26
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A004010"
+      ],
+      "value": 26
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A004020"
+      ],
+      "value": 26
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A004030"
+      ],
+      "value": 27
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A004040"
+      ],
+      "value": 27
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A004050"
+      ],
+      "value": 27
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A004060"
+      ],
+      "value": 27
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A006010"
+      ],
+      "value": 28
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A006020"
+      ],
+      "value": 28
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A006030"
+      ],
+      "value": 29
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A006031"
+      ],
+      "value": 29
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A006040"
+      ],
+      "value": 30
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A006050"
+      ],
+      "value": 30
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "A007010"
+      ],
+      "value": 30
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "ADL0005"
+      ],
+      "value": 31
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "ADL0010"
+      ],
+      "value": 31
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "ADL0020"
+      ],
+      "value": 31
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "ADL0030"
+      ],
+      "value": 31
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "ADL0040"
+      ],
+      "value": 31
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "CAN0010"
+      ],
+      "value": 31
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "CAN0020"
+      ],
+      "value": 32
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "CAN0030"
+      ],
+      "value": 32
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "CAN0040"
+      ],
+      "value": 32
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "FIM0010"
+      ],
+      "value": 33
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "FIM0020"
+      ],
+      "value": 33
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "JCS0010"
+      ],
+      "value": 34
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "JCS0020"
+      ],
+      "value": 34
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "M010010"
+      ],
+      "value": 34
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "M010020"
+      ],
+      "value": 34
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "M010030"
+      ],
+      "value": 34
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "M040010"
+      ],
+      "value": 34
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "M040020"
+      ],
+      "value": 34
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "M040031"
+      ],
+      "value": 35
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "M050011"
+      ],
+      "value": 35
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "M050020"
+      ],
+      "value": 36
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "M050030"
+      ],
+      "value": 36
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "M050041"
+      ],
+      "value": 36
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "M050051"
+      ],
+      "value": 36
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "M050070"
+      ],
+      "value": 36
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "M050080"
+      ],
+      "value": 36
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "M050090"
+      ],
+      "value": 36
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "M060010"
+      ],
+      "value": 37
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "M060020"
+      ],
+      "value": 37
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "M120010"
+      ],
+      "value": 37
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "M150010"
+      ],
+      "value": 37
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "M160010"
+      ],
+      "value": 37
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "M170010"
+      ],
+      "value": 37
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "M170020"
+      ],
+      "value": 37
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "M180010"
+      ],
+      "value": 38
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "M180011"
+      ],
+      "value": 38
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "M180020"
+      ],
+      "value": 39
+    },
+    {
+      "op": "set",
+      "path": [
+        "source_coverage",
+        "ff1_payload_pdf_pages",
+        "M180021"
+      ],
+      "value": 39
+    },
+    {
+      "op": "set",
+      "path": [
+        "sources"
+      ],
+      "value": [
+        {
+          "authority": "dpc_office_primary",
+          "url": "https://www01.prrism.com/dpc/2026/file/setumei_20260325.pdf"
+        }
+      ]
+    },
+    {
+      "op": "set",
+      "path": [
+        "year"
+      ],
+      "value": 2026
+    },
+    {
+      "op": "set",
+      "path": [
+        "ff1",
+        "codes",
+        "A000070",
+        "payloads",
+        "1",
+        "interpretation_source_pdf_page"
+      ],
+      "value": 58
+    },
+    {
+      "op": "set",
+      "path": [
+        "ff1",
+        "codes",
+        "A000070",
+        "payloads",
+        "2",
+        "interpretation_source_pdf_page"
+      ],
+      "value": 58
+    },
+    {
+      "op": "set",
+      "path": [
+        "document_revision"
+      ],
+      "value": "20260325"
+    },
+    {
+      "op": "set",
+      "path": [
+        "data_effective_from"
+      ],
+      "value": "20260601"
+    },
+    {
+      "op": "set",
+      "path": [
+        "data_effective_to"
+      ],
+      "value": "20270331"
+    }
+  ],
+  "definition_evidence": {
+    "ef": {
+      "evidence_level": "official_table",
+      "source_ids": [
+        "dpc-2026-20260601"
+      ]
+    },
+    "ff1": {
+      "evidence_level": "official_table",
+      "source_ids": [
+        "dpc-2026-20260601"
+      ]
+    }
+  },
+  "id": "dpc-2026-20260601",
+  "source_ids": [
+    "dpc-2026-20260601"
+  ]
+}
