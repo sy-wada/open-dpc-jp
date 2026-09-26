@@ -9,7 +9,7 @@ from open_dpc.semantics.comorbidity import CharlsonEvaluator, calculate_charlson
 
 
 ROOT = Path(__file__).resolve().parents[1]
-QUAN_SHA256 = "ba7a0c1a231d05cd37e5bbeb9962d13b5c270dfed92983fd970ce04439aecf1d"
+QUAN_SHA256 = "dde7a7630e2bbaabd9a4d9ad07a989ad339f404fb57c7ae2b76846d02a43120e"
 
 
 class MiraiCciTests(unittest.TestCase):

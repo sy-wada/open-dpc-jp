@@ -4,6 +4,7 @@
   "source_allowlist": "publication-allowlist.json",
   "files": {
     ".gitignore": "f24fa4b8e813c3882649f648f1180051b62df9c5e24f7b6271b0014abf6bd049",
+    ".gitattributes": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c",
     "build_site.py": "080604aa419a3f087a0c5603647a85607f6705dc7e1bac148324f37b0bd4eb44",
     "CHANGELOG.md": "08939fb13f6ee7832f32fb9bf26e90613f0f82e0d6acaba2b12c5074cb1ac803",
     "CITATION.cff": "50401a2522d3e9151a0a07754cf247eba01ff1ac8a45e74fd67c651102272fec",
@@ -29,7 +30,7 @@
     "tests/test_disease_snapshot.py": "fcd2ae412394b3e78780cd7c94b7825a283ecd2ac34c87ea3b249cd18727d8ad",
     "tests/test_extraction_contract.py": "27c5440219df211cd79caaad85fa59f1fe1e0d216713a32b36a3cc232d7a0d53",
     "tests/test_extraction_powershell.ps1": "8655244350dc9934c622222b8b3a7c432f8b4d68e366536a174e8d7f02b16104",
-    "tests/test_mirai_cci.py": "4dd05ec725be5ca4157fb39167fee5a12cfa75c7840fae7f3e166a2f955a717e",
+    "tests/test_mirai_cci.py": "4d905b7214144ad7c237f76ed812383f573877e9364d3bf4f03c29c5b316c119",
     "tests/test_public_namespace.py": "948da4f17ade7a4346d4bfe71618c4d9b533ce6eb9c8db64f464a93ea7209ae4",
     "tests/test_quan_table1.py": "23a29adac66cf5007ebc493907fb20bcbf452e9a81b174e7a52942f216722bc4",
     "tests/test_references_semantics.py": "2720e9c02ee9eb6b299f5a8c634bd2c5c9cbbe7f236c2de13d0e1ee7e05097cd",
