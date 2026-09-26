@@ -3,6 +3,7 @@ message: "Cite the software version and schema/definition hashes used; cite the 
 title: "Open DPC JP"
 type: software
 version: 0.1.0
+date-released: 2026-09-26
 license: MIT
 url: "https://github.com/sy-wada/open-dpc-jp"
 repository-code: "https://github.com/sy-wada/open-dpc-jp"
