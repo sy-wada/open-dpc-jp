@@ -1,0 +1,10 @@
+[project]
+site_name = "Open DPC JP"
+site_description = "日本の DPC データを扱う Python ライブラリと補助ツール"
+docs_dir = "docs"
+site_dir = "site"
+use_directory_urls = true
+
+[project.theme]
+language = "ja"
+font = false

@@ -1,0 +1,1453 @@
+{
+  "data_effective_from": "20210401",
+  "data_effective_to": "20220331",
+  "definition_evidence": {
+    "ef": {
+      "evidence_level": "official_table",
+      "source_ids": [
+        "dpc-2021-20210401"
+      ]
+    },
+    "ff1": {
+      "evidence_level": "official_table",
+      "source_ids": [
+        "dpc-2021-20210401"
+      ]
+    }
+  },
+  "document_revision": "20210401",
+  "ef": {
+    "category_labels": {
+      "11": "初診",
+      "12": "再診",
+      "13": "指導",
+      "14": "在宅",
+      "21": "内服",
+      "22": "屯服",
+      "23": "外用",
+      "24": "調剤",
+      "25": "処方",
+      "26": "麻毒",
+      "27": "調基",
+      "28": "その他入院",
+      "31": "皮下筋肉内",
+      "32": "静脈内",
+      "33": "その他",
+      "39": "薬剤料減点",
+      "40": "処置",
+      "50": "手術",
+      "54": "麻酔",
+      "60": "検査・病理",
+      "70": "画像診断",
+      "80": "その他",
+      "90": "入院基本料",
+      "92": "特定入院料",
+      "97": "食事療養・標準負担額",
+      "SY": "傷病"
+    },
+    "columns": [
+      "施設コード",
+      "データ識別番号",
+      "退院年月日",
+      "入院年月日",
+      "データ区分",
+      "順序番号",
+      "行為明細番号",
+      "病院点数マスタコード",
+      "レセプト電算処理システム用コード",
+      "解釈番号",
+      "診療明細名称",
+      "使用量",
+      "基準単位",
+      "明細点数・金額",
+      "円・点区分",
+      "出来高実績点数",
+      "行為明細区分情報",
+      "行為点数",
+      "行為薬剤料",
+      "行為材料料",
+      "行為回数",
+      "保険者番号",
+      "レセプト種別コード",
+      "実施年月日",
+      "レセプト科区分",
+      "診療科区分",
+      "医師コード",
+      "病棟コード",
+      "病棟区分",
+      "入外区分",
+      "施設タイプ"
+    ],
+    "ef17_length": 12,
+    "efg_ef17": {
+      "length": 12,
+      "positions": {
+        "1": {
+          "name": "outside_prescription_flag"
+        },
+        "10": {
+          "reserved": true
+        },
+        "11": {
+          "reserved": true
+        },
+        "12": {
+          "reserved": true
+        },
+        "2": {
+          "name": "generic_prescription_flag"
+        },
+        "3": {
+          "name": "sex_code"
+        },
+        "4": {
+          "name": "outcome_code"
+        },
+        "5": {
+          "name": "main_disease_flag"
+        },
+        "6": {
+          "reserved": true
+        },
+        "7": {
+          "reserved": true
+        },
+        "8": {
+          "reserved": true
+        },
+        "9": {
+          "reserved": true
+        }
+      }
+    },
+    "efg_flags": [
+      "outside_prescription_flag",
+      "generic_prescription_flag",
+      "sex_code",
+      "outcome_code",
+      "main_disease_flag"
+    ],
+    "efn_ef17": {
+      "length": 12,
+      "positions": {
+        "1": {
+          "name": "discharge_prescription_flag"
+        },
+        "10": {
+          "reserved": true
+        },
+        "11": {
+          "reserved": true
+        },
+        "12": {
+          "reserved": true
+        },
+        "2": {
+          "name": "inclusive_item_flag"
+        },
+        "3": {
+          "name": "brought_in_drug_flag"
+        },
+        "4": {
+          "name": "brought_in_prescriber_flag"
+        },
+        "5": {
+          "name": "dpc_applicability_flag"
+        },
+        "6": {
+          "reserved": true
+        },
+        "7": {
+          "reserved": true
+        },
+        "8": {
+          "reserved": true
+        },
+        "9": {
+          "reserved": true
+        }
+      }
+    },
+    "efn_flags": [
+      "discharge_prescription_flag",
+      "inclusive_item_flag",
+      "brought_in_drug_flag",
+      "brought_in_prescriber_flag",
+      "dpc_applicability_flag"
+    ],
+    "fixed_width_unit": "characters",
+    "outpatient_columns": [
+      "施設コード",
+      "データ識別番号",
+      "生年月日",
+      "外来受診年月日",
+      "データ区分",
+      "順序番号",
+      "行為明細番号",
+      "病院点数マスタコード",
+      "レセプト電算処理システム用コード",
+      "解釈番号",
+      "診療明細名称",
+      "使用量",
+      "基準単位",
+      "明細点数・金額",
+      "円・点区分",
+      "出来高実績点数",
+      "行為明細区分情報",
+      "行為点数",
+      "行為薬剤料",
+      "行為材料料",
+      "行為回数",
+      "保険者番号",
+      "レセプト種別コード",
+      "実施年月日・診療開始日",
+      "レセプト科区分",
+      "診療科区分",
+      "医師コード",
+      "病棟コード",
+      "病棟区分",
+      "入外区分",
+      "施設タイプ"
+    ],
+    "outpatient_source_columns": [
+      "施設コード",
+      "データ識別番号",
+      "生年月日(西暦)",
+      "外来受診年月日(西暦)",
+      "データ区分",
+      "順序番号",
+      "行為明細番号",
+      "病院点数マスタコード",
+      "レセプト電算処理システム用コード",
+      "解釈番号",
+      "診療明細名称",
+      "使用量",
+      "基準単位",
+      "明細点数・金額",
+      "円・点区分",
+      "出来高実績点数",
+      "行為明細区分情報",
+      "行為点数",
+      "行為薬剤料",
+      "行為材料料",
+      "行為回数",
+      "保険者番号",
+      "レセプト種別コード",
+      "実施年月日・診療開始日",
+      "レセプト科区分",
+      "診療科区分",
+      "医師コード",
+      "病棟コード",
+      "病棟区分",
+      "入外区分",
+      "施設タイプ"
+    ],
+    "source_columns": [
+      "施設コード",
+      "データ識別番号",
+      "退院年月日(西暦)",
+      "入院年月日(西暦)",
+      "データ区分",
+      "順序番号",
+      "行為明細番号",
+      "病院点数マスタコード",
+      "レセプト電算処理システム用コード",
+      "解釈番号",
+      "診療明細名称",
+      "使用量",
+      "基準単位",
+      "明細点数・金額",
+      "円・点区分",
+      "出来高実績点数",
+      "行為明細区分情報",
+      "行為点数",
+      "行為薬剤料",
+      "行為材料料",
+      "行為回数",
+      "保険者番号",
+      "レセプト種別コード",
+      "実施年月日",
+      "レセプト科区分",
+      "診療科区分",
+      "医師コード",
+      "病棟コード",
+      "病棟区分",
+      "入外区分",
+      "施設タイプ"
+    ],
+    "widths": [
+      9,
+      10,
+      8,
+      8,
+      2,
+      4,
+      3,
+      12,
+      9,
+      8,
+      254,
+      11,
+      3,
+      12,
+      1,
+      8,
+      12,
+      8,
+      8,
+      8,
+      3,
+      8,
+      4,
+      8,
+      2,
+      3,
+      10,
+      10,
+      1,
+      1,
+      3
+    ]
+  },
+  "effective_from": "20210401",
+  "effective_to": "20220331",
+  "ff1": {
+    "codes": {
+      "A000010": {
+        "payloads": {
+          "1": {
+            "name": "生年月日",
+            "type": "date"
+          },
+          "2": {
+            "name": "性別",
+            "type": "string"
+          },
+          "3": {
+            "name": "患者住所地域の郵便番号",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "A000020": {
+        "payloads": {
+          "1": {
+            "name": "入院年月日",
+            "type": "date"
+          },
+          "2": {
+            "name": "入院経路",
+            "type": "string"
+          },
+          "3": {
+            "name": "他院よりの紹介の有無",
+            "type": "string"
+          },
+          "4": {
+            "name": "自院の外来からの入院",
+            "type": "string"
+          },
+          "5": {
+            "name": "予定・救急医療入院",
+            "type": "string"
+          },
+          "6": {
+            "name": "救急車による搬送の有無",
+            "type": "string"
+          },
+          "7": {
+            "name": "入院前の在宅医療の有無",
+            "type": "string"
+          },
+          "8": {
+            "name": "自傷行為・自殺企図の有無",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "A000030": {
+        "payloads": {
+          "1": {
+            "name": "退院年月日",
+            "type": "date"
+          },
+          "2": {
+            "name": "退院先",
+            "type": "string"
+          },
+          "3": {
+            "name": "退院時転帰",
+            "type": "string"
+          },
+          "4": {
+            "name": "24時間以内の死亡の有無",
+            "type": "string"
+          },
+          "5": {
+            "name": "退院後の在宅医療の有無",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "A000031": {
+        "payloads": {
+          "1": {
+            "name": "様式1開始日",
+            "type": "date"
+          },
+          "2": {
+            "name": "様式1終了日",
+            "type": "date"
+          }
+        },
+        "version": "20140401"
+      },
+      "A000040": {
+        "payloads": {
+          "2": {
+            "name": "診療科コード",
+            "type": "string"
+          },
+          "3": {
+            "name": "転科の有無",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "A000050": {
+        "payloads": {
+          "2": {
+            "name": "調査対象となる一般病棟への入院の有無",
+            "type": "string"
+          },
+          "3": {
+            "name": "調査対象となる精神病棟への入院の有無",
+            "type": "string"
+          },
+          "4": {
+            "name": "調査対象となるその他の病棟への入院の有無",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "A000060": {
+        "payloads": {
+          "2": {
+            "name": "入院中の主な診療目的",
+            "type": "string"
+          },
+          "3": {
+            "name": "治験実施の有無",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "A000070": {
+        "payloads": {
+          "1": {
+            "name": "前回退院年月日",
+            "type": "date"
+          },
+          "2": {
+            "name": "前回同一傷病で自院入院の有無",
+            "type": "date"
+          }
+        },
+        "version": "20140401"
+      },
+      "A000080": {
+        "payloads": {
+          "2": {
+            "name": "再入院種別",
+            "type": "string"
+          },
+          "3": {
+            "name": "理由の種別",
+            "type": "string"
+          },
+          "9": {
+            "name": "自由記載欄",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "A000090": {
+        "payloads": {
+          "2": {
+            "name": "再転棟種別",
+            "type": "string"
+          },
+          "3": {
+            "name": "理由の種別",
+            "type": "string"
+          },
+          "9": {
+            "name": "自由記載欄",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "A001010": {
+        "payloads": {
+          "2": {
+            "name": "身長",
+            "type": "string"
+          },
+          "3": {
+            "name": "体重",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "A001020": {
+        "payloads": {
+          "2": {
+            "name": "喫煙指数",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "A001030": {
+        "payloads": {
+          "1": {
+            "name": "入棟日",
+            "type": "date"
+          },
+          "2": {
+            "name": "退棟日",
+            "type": "date"
+          },
+          "3": {
+            "name": "入棟時の褥瘡の有無",
+            "type": "string"
+          },
+          "4": {
+            "name": "退棟時の褥瘡の有無",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "A002010": {
+        "payloads": {
+          "2": {
+            "name": "現在の妊娠の有無",
+            "type": "string"
+          },
+          "3": {
+            "name": "入院時の妊娠週数",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "A003010": {
+        "payloads": {
+          "2": {
+            "name": "出生時体重",
+            "type": "string"
+          },
+          "3": {
+            "name": "出生時妊娠週数",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "A004010": {
+        "payloads": {
+          "2": {
+            "name": "認知症高齢者の日常生活自立度判定基準",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "A004020": {
+        "payloads": {
+          "2": {
+            "name": "要介護度",
+            "type": "string"
+          }
+        },
+        "version": "20180401"
+      },
+      "A004030": {
+        "payloads": {
+          "3": {
+            "name": "低栄養の有無（様式1開始日時点）",
+            "type": "string"
+          },
+          "4": {
+            "name": "摂食・嚥下機能障害の有無（様式1開始日時点）",
+            "type": "string"
+          },
+          "5": {
+            "name": "低栄養の有無（様式1終了日時点）",
+            "type": "string"
+          },
+          "6": {
+            "name": "摂食・嚥下機能障害の有無（様式1終了日時点）",
+            "type": "string"
+          },
+          "7": {
+            "name": "経管・経静脈栄養の状況（様式1開始日時点）",
+            "type": "string"
+          },
+          "8": {
+            "name": "経管・経静脈栄養の状況（様式1終了日時点）",
+            "type": "string"
+          }
+        },
+        "version": "20180401"
+      },
+      "A006010": {
+        "payloads": {
+          "2": {
+            "name": "ICD10コード",
+            "type": "string"
+          },
+          "3": {
+            "name": "空欄",
+            "type": "string"
+          },
+          "4": {
+            "name": "傷病名コード",
+            "type": "string"
+          },
+          "5": {
+            "name": "修飾語コード",
+            "type": "string"
+          },
+          "6": {
+            "name": "修飾語コード",
+            "type": "string"
+          },
+          "7": {
+            "name": "修飾語コード",
+            "type": "string"
+          },
+          "8": {
+            "name": "修飾語コード",
+            "type": "string"
+          },
+          "9": {
+            "name": "主傷病名",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "A006020": {
+        "payloads": {
+          "2": {
+            "name": "ICD10コード",
+            "type": "string"
+          },
+          "3": {
+            "name": "空欄",
+            "type": "string"
+          },
+          "4": {
+            "name": "傷病名コード",
+            "type": "string"
+          },
+          "5": {
+            "name": "修飾語コード",
+            "type": "string"
+          },
+          "6": {
+            "name": "修飾語コード",
+            "type": "string"
+          },
+          "7": {
+            "name": "修飾語コード",
+            "type": "string"
+          },
+          "8": {
+            "name": "修飾語コード",
+            "type": "string"
+          },
+          "9": {
+            "name": "入院の契機となった傷病名",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "A006030": {
+        "payloads": {
+          "2": {
+            "name": "ICD10コード",
+            "type": "string"
+          },
+          "3": {
+            "name": "病名付加コード",
+            "type": "string"
+          },
+          "4": {
+            "name": "傷病名コード",
+            "type": "string"
+          },
+          "5": {
+            "name": "修飾語コード",
+            "type": "string"
+          },
+          "6": {
+            "name": "修飾語コード",
+            "type": "string"
+          },
+          "7": {
+            "name": "修飾語コード",
+            "type": "string"
+          },
+          "8": {
+            "name": "修飾語コード",
+            "type": "string"
+          },
+          "9": {
+            "name": "医療資源を最も投入した傷病名",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "A006031": {
+        "payloads": {
+          "2": {
+            "name": "ICD10コード",
+            "type": "string"
+          },
+          "3": {
+            "name": "空欄",
+            "type": "string"
+          },
+          "4": {
+            "name": "傷病名コード",
+            "type": "string"
+          },
+          "5": {
+            "name": "修飾語コード",
+            "type": "string"
+          },
+          "6": {
+            "name": "修飾語コード",
+            "type": "string"
+          },
+          "7": {
+            "name": "修飾語コード",
+            "type": "string"
+          },
+          "8": {
+            "name": "修飾語コード",
+            "type": "string"
+          },
+          "9": {
+            "name": "医療資源を2番目に投入した傷病名",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "A006040": {
+        "payloads": {
+          "2": {
+            "name": "ICD10コード",
+            "type": "string"
+          },
+          "3": {
+            "name": "空欄",
+            "type": "string"
+          },
+          "4": {
+            "name": "傷病名コード",
+            "type": "string"
+          },
+          "5": {
+            "name": "修飾語コード",
+            "type": "string"
+          },
+          "6": {
+            "name": "修飾語コード",
+            "type": "string"
+          },
+          "7": {
+            "name": "修飾語コード",
+            "type": "string"
+          },
+          "8": {
+            "name": "修飾語コード",
+            "type": "string"
+          },
+          "9": {
+            "name": "入院時併存症名",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "A006050": {
+        "payloads": {
+          "2": {
+            "name": "ICD10コード",
+            "type": "string"
+          },
+          "3": {
+            "name": "空欄",
+            "type": "string"
+          },
+          "4": {
+            "name": "傷病名コード",
+            "type": "string"
+          },
+          "5": {
+            "name": "修飾語コード",
+            "type": "string"
+          },
+          "6": {
+            "name": "修飾語コード",
+            "type": "string"
+          },
+          "7": {
+            "name": "修飾語コード",
+            "type": "string"
+          },
+          "8": {
+            "name": "修飾語コード",
+            "type": "string"
+          },
+          "9": {
+            "name": "入院後発症疾患名",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "A006060": {
+        "payloads": {
+          "2": {
+            "name": "難病の告示番号1",
+            "type": "string"
+          },
+          "3": {
+            "name": "医療費助成の有無1",
+            "type": "string"
+          },
+          "4": {
+            "name": "難病の告示番号2",
+            "type": "string"
+          },
+          "5": {
+            "name": "医療費助成の有無2",
+            "type": "string"
+          }
+        },
+        "version": "20160401"
+      },
+      "A007010": {
+        "payloads": {
+          "1": {
+            "name": "手術日",
+            "type": "date"
+          },
+          "2": {
+            "name": "点数表コード",
+            "type": "string"
+          },
+          "3": {
+            "name": "手術基幹コード",
+            "type": "string"
+          },
+          "4": {
+            "name": "手術回数",
+            "type": "string"
+          },
+          "5": {
+            "name": "手術側数",
+            "type": "string"
+          },
+          "6": {
+            "name": "麻酔",
+            "type": "string"
+          },
+          "9": {
+            "name": "手術名",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "ADL0010": {
+        "payloads": {
+          "2": {
+            "name": "入院時のADLスコア",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "ADL0020": {
+        "payloads": {
+          "2": {
+            "name": "退院時のADLスコア",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "ADL0030": {
+        "payloads": {
+          "2": {
+            "name": "入棟・入室時のADLスコア",
+            "type": "string"
+          }
+        },
+        "version": "20200401"
+      },
+      "ADL0040": {
+        "payloads": {
+          "2": {
+            "name": "退棟・退室時のADLスコア",
+            "type": "string"
+          }
+        },
+        "version": "20200401"
+      },
+      "CAN0010": {
+        "payloads": {
+          "2": {
+            "name": "空欄",
+            "type": "string"
+          },
+          "3": {
+            "name": "がんの初発、再発",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "CAN0020": {
+        "payloads": {
+          "2": {
+            "name": "空欄",
+            "type": "string"
+          },
+          "3": {
+            "name": "UICC病期分類(T)",
+            "type": "string"
+          },
+          "4": {
+            "name": "UICC病期分類(N)",
+            "type": "string"
+          },
+          "5": {
+            "name": "UICC病期分類(M)",
+            "type": "string"
+          },
+          "6": {
+            "name": "UICC病期分類(版)",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "CAN0030": {
+        "payloads": {
+          "2": {
+            "name": "空欄",
+            "type": "string"
+          },
+          "3": {
+            "name": "癌取扱い規約に基づくがんのStage分類",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "CAN0040": {
+        "payloads": {
+          "2": {
+            "name": "空欄",
+            "type": "string"
+          },
+          "3": {
+            "name": "化学療法の有無",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "FIM0010": {
+        "payloads": {
+          "1": {
+            "name": "入棟日",
+            "type": "date"
+          },
+          "2": {
+            "name": "退棟日",
+            "type": "date"
+          },
+          "3": {
+            "name": "入棟時FIM得点",
+            "type": "string"
+          },
+          "4": {
+            "name": "退棟時FIM得点",
+            "type": "string"
+          },
+          "5": {
+            "name": "入棟時体重",
+            "type": "string"
+          },
+          "6": {
+            "name": "退棟時体重",
+            "type": "string"
+          }
+        },
+        "version": "20160401"
+      },
+      "JCS0010": {
+        "payloads": {
+          "2": {
+            "name": "入院時意識障害がある場合のJCS",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "JCS0020": {
+        "payloads": {
+          "2": {
+            "name": "退院時意識障害がある場合のJCS",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "M010010": {
+        "payloads": {
+          "2": {
+            "name": "発症前RankinScale",
+            "type": "string"
+          },
+          "3": {
+            "name": "脳卒中の発症時期",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "M010020": {
+        "payloads": {
+          "2": {
+            "name": "退院時modifiedRankinScale",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "M010030": {
+        "payloads": {
+          "2": {
+            "name": "テモゾロミド（初回治療）の有無",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "M040010": {
+        "payloads": {
+          "2": {
+            "name": "Hugh-Jones分類",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "M040020": {
+        "payloads": {
+          "2": {
+            "name": "肺炎の重症度分類",
+            "type": "string"
+          },
+          "3": {
+            "name": "医療介護関連肺炎に該当の有無",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "M050010": {
+        "payloads": {
+          "2": {
+            "name": "NYHA心機能分類",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "M050020": {
+        "payloads": {
+          "2": {
+            "name": "狭心症、慢性虚血性心疾患（050050）における入院時の重症度：CCS分類",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "M050030": {
+        "payloads": {
+          "2": {
+            "name": "急性心筋梗塞（050030）における入院時の重症度：Killip分類",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "M050040": {
+        "payloads": {
+          "3": {
+            "name": "収縮期血圧",
+            "type": "string"
+          }
+        },
+        "version": "20160401"
+      },
+      "M060010": {
+        "payloads": {
+          "2": {
+            "name": "肝硬変のChild-Pugh分類",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "M060020": {
+        "payloads": {
+          "2": {
+            "name": "急性膵炎の重症度分類",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "M120010": {
+        "payloads": {
+          "2": {
+            "name": "入院周辺の分娩の有無",
+            "type": "string"
+          },
+          "3": {
+            "name": "分娩時出血量",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "M160010": {
+        "payloads": {
+          "2": {
+            "name": "BurnIndex",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "M170010": {
+        "payloads": {
+          "2": {
+            "name": "入院時GAF尺度",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "M170020": {
+        "payloads": {
+          "2": {
+            "name": "精神保健福祉法における入院形態",
+            "type": "string"
+          },
+          "3": {
+            "name": "精神保健福祉法に基づく隔離日数",
+            "type": "string"
+          },
+          "4": {
+            "name": "精神保健福祉法に基づく身体拘束日数",
+            "type": "string"
+          }
+        },
+        "version": "20140401"
+      },
+      "M180010": {
+        "payloads": {
+          "1": {
+            "name": "空欄",
+            "type": "string"
+          },
+          "2": {
+            "name": "入室日当日測定日",
+            "type": "string"
+          },
+          "3": {
+            "name": "入室日翌日測定日",
+            "type": "string"
+          },
+          "4": {
+            "name": "退室日測定日",
+            "type": "string"
+          },
+          "5": {
+            "name": "空欄",
+            "type": "string"
+          },
+          "6": {
+            "name": "入室日当日測定値",
+            "type": "string"
+          },
+          "7": {
+            "name": "入室日翌日測定値",
+            "type": "string"
+          },
+          "8": {
+            "name": "退室日測定値",
+            "type": "string"
+          }
+        },
+        "version": "20180401"
+      },
+      "M180011": {
+        "payloads": {
+          "1": {
+            "name": "空欄",
+            "type": "string"
+          },
+          "2": {
+            "name": "治療開始日当日測定日",
+            "type": "string"
+          },
+          "3": {
+            "name": "治療開始日翌日測定日",
+            "type": "string"
+          },
+          "4": {
+            "name": "空欄",
+            "type": "string"
+          },
+          "5": {
+            "name": "空欄",
+            "type": "string"
+          },
+          "6": {
+            "name": "治療開始日当日測定値",
+            "type": "string"
+          },
+          "7": {
+            "name": "治療開始日翌日測定値",
+            "type": "string"
+          },
+          "8": {
+            "name": "空欄",
+            "type": "string"
+          }
+        },
+        "version": "20180401"
+      },
+      "M180020": {
+        "payloads": {
+          "1": {
+            "name": "空欄",
+            "type": "string"
+          },
+          "2": {
+            "name": "入室日当日測定日",
+            "type": "string"
+          },
+          "3": {
+            "name": "入室日翌日測定日",
+            "type": "string"
+          },
+          "4": {
+            "name": "退室日測定日",
+            "type": "string"
+          },
+          "5": {
+            "name": "空欄",
+            "type": "string"
+          },
+          "6": {
+            "name": "入室日当日測定値",
+            "type": "string"
+          },
+          "7": {
+            "name": "入室日翌日測定値",
+            "type": "string"
+          },
+          "8": {
+            "name": "退室日測定値",
+            "type": "string"
+          }
+        },
+        "version": "20180401"
+      },
+      "M180021": {
+        "payloads": {
+          "1": {
+            "name": "空欄",
+            "type": "string"
+          },
+          "2": {
+            "name": "治療開始日当日測定日",
+            "type": "string"
+          },
+          "3": {
+            "name": "治療開始日翌日測定日",
+            "type": "string"
+          },
+          "4": {
+            "name": "空欄",
+            "type": "string"
+          },
+          "5": {
+            "name": "空欄",
+            "type": "string"
+          },
+          "6": {
+            "name": "治療開始日当日測定値",
+            "type": "string"
+          },
+          "7": {
+            "name": "治療開始日翌日測定値",
+            "type": "string"
+          },
+          "8": {
+            "name": "空欄",
+            "type": "string"
+          }
+        },
+        "version": "20180401"
+      }
+    },
+    "columns": [
+      "施設ｺｰﾄﾞ",
+      "ﾃﾞｰﾀ識別番号",
+      "入院年月日",
+      "回数管理番号",
+      "統括診療情報番号",
+      "ｺｰﾄﾞ",
+      "ﾊﾞｰｼﾞｮﾝ",
+      "連番",
+      "ﾍﾟｲﾛｰﾄﾞ1(日付等)",
+      "ﾍﾟｲﾛｰﾄﾞ2(ｺｰﾄﾞ等)",
+      "ﾍﾟｲﾛｰﾄﾞ3",
+      "ﾍﾟｲﾛｰﾄﾞ4",
+      "ﾍﾟｲﾛｰﾄﾞ5",
+      "ﾍﾟｲﾛｰﾄﾞ6",
+      "ﾍﾟｲﾛｰﾄﾞ7",
+      "ﾍﾟｲﾛｰﾄﾞ8",
+      "ﾍﾟｲﾛｰﾄﾞ9(可変長文字列)"
+    ]
+  },
+  "id": "dpc-2021-20210401",
+  "limitations": [
+    "not-a-submission-validator",
+    "clinical-eligibility-and-enum-validation-not-implemented"
+  ],
+  "revision": "20210401",
+  "schema_version": "2",
+  "source_coverage": {
+    "efg_flags_pdf_page": 176,
+    "efg_layout_pdf_page": 180,
+    "efn_flags_pdf_pages": [
+      163
+    ],
+    "efn_layout_pdf_page": 174,
+    "ff1_layout_pdf_page": 21,
+    "ff1_payload_pdf_pages": {
+      "A000010": 23,
+      "A000020": 23,
+      "A000030": 23,
+      "A000031": 24,
+      "A000040": 24,
+      "A000050": 24,
+      "A000060": 24,
+      "A000070": 24,
+      "A000080": 24,
+      "A000090": 24,
+      "A001010": 25,
+      "A001020": 25,
+      "A001030": 25,
+      "A002010": 25,
+      "A003010": 25,
+      "A004010": 25,
+      "A004020": 25,
+      "A004030": 25,
+      "A006010": 26,
+      "A006020": 26,
+      "A006030": 26,
+      "A006031": 27,
+      "A006040": 27,
+      "A006050": 27,
+      "A006060": 27,
+      "A007010": 28,
+      "ADL0010": 28,
+      "ADL0020": 28,
+      "ADL0030": 28,
+      "ADL0040": 28,
+      "CAN0010": 28,
+      "CAN0020": 29,
+      "CAN0030": 29,
+      "CAN0040": 29,
+      "FIM0010": 29,
+      "JCS0010": 29,
+      "JCS0020": 29,
+      "M010010": 30,
+      "M010020": 30,
+      "M010030": 30,
+      "M040010": 30,
+      "M040020": 30,
+      "M050010": 30,
+      "M050020": 30,
+      "M050030": 30,
+      "M050040": 30,
+      "M060010": 31,
+      "M060020": 31,
+      "M120010": 31,
+      "M160010": 31,
+      "M170010": 31,
+      "M170020": 31,
+      "M180010": 32,
+      "M180011": 32,
+      "M180020": 33,
+      "M180021": 33
+    },
+    "unverified_areas": []
+  },
+  "source_ids": [
+    "dpc-2021-20210401"
+  ],
+  "sources": [
+    {
+      "authority": "mhlw_primary",
+      "url": "https://www.mhlw.go.jp/content/12404000/000764207.pdf"
+    }
+  ],
+  "validation_scope": [
+    "ff1-column-order",
+    "ff1-payload-position-name-type-version",
+    "ef-column-order-width",
+    "ef17-positions"
+  ],
+  "validation_status": "structural-table-checked",
+  "year": 2021
+}

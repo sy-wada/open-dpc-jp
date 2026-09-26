@@ -1,0 +1,14 @@
+{
+  "quan-2005": {
+    "latest": "1",
+    "versions": {
+      "1": "quan-2005.json"
+    }
+  },
+  "mirai-id-cci": {
+    "latest": "1",
+    "versions": {
+      "1": "mirai-id-cci-v1.json"
+    }
+  }
+}
