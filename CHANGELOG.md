@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.0 — first public release candidate
+## 0.1.0 — first public release
 
 - Publish the `open_dpc_jp` import namespace with a compatibility path to the pre-public `open_dpc` implementation.
 - Include versioned structural DPC schemas, explicit reference annotation, Quan 2005 and MIRAI-ID CCI definitions.

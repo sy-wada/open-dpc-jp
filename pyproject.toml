@@ -18,6 +18,12 @@ classifiers = [
   "Operating System :: OS Independent",
 ]
 
+[project.urls]
+Homepage = "https://github.com/sy-wada/open-dpc-jp"
+Documentation = "https://open-dpc-jp.pages.dev/"
+Repository = "https://github.com/sy-wada/open-dpc-jp"
+Issues = "https://github.com/sy-wada/open-dpc-jp/issues"
+
 [dependency-groups]
 docs = ["zensical==0.0.63"]
 release = ["build==1.3.0", "twine==6.2.0"]

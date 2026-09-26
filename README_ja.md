@@ -29,8 +29,8 @@ print(ef["diagnostics"], ff1["schema"])
 
 ## 対応データと文書
 
-2014–2026 年の構造的 profile を収録し、必要な年度は改訂を区別します。出典と制約は `spec/dpc/source_ledger.json` に記録しています。使い方、方法、入力仕様、抽出、Patient List CSV 契約は[日本語ドキュメントの原稿](docs/index.md)を参照してください。サイト URL は公開時に追加します。
+2014–2026 年の構造的 profile を収録し、必要な年度は改訂を区別します。出典と制約は `spec/dpc/source_ledger.json` に記録しています。使い方、方法、入力仕様、抽出、Patient List CSV 契約は[日本語ドキュメント](https://open-dpc-jp.pages.dev/)を参照してください。[ドキュメントの原稿](docs/index.md)も repository で公開しています。
 
 ## ライセンスと引用
 
-project-owned code は、[NOTICE](NOTICE.md) の権利確認を前提として [MIT](LICENSE) で提供します。第三者の論文、公式 DPC データ、マスタを再ライセンスしません。引用情報は [CITATION.cff](CITATION.cff) を参照し、必要に応じて原著と DPC 仕様も引用してください。
+project-owned code は [MIT](LICENSE) で提供します。適用範囲と第三者資料は [NOTICE](NOTICE.md) を参照してください。第三者の論文、公式 DPC データ、マスタを再ライセンスしません。引用情報は [CITATION.cff](CITATION.cff) を参照し、必要に応じて原著と DPC 仕様も引用してください。

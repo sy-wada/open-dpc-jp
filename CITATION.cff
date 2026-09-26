@@ -4,6 +4,8 @@ title: "Open DPC JP"
 type: software
 version: 0.1.0
 license: MIT
+url: "https://github.com/sy-wada/open-dpc-jp"
+repository-code: "https://github.com/sy-wada/open-dpc-jp"
 authors:
   - family-names: Wada
     given-names: Shoya

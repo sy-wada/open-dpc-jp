@@ -29,8 +29,8 @@ print(ef["diagnostics"], ff1["schema"])
 
 ## Supported data and documentation
 
-Versioned structural profiles cover DPC years 2014–2026, with explicit revisions where needed. Source coverage and limits are recorded in `spec/dpc/source_ledger.json`. See the [Japanese documentation source](docs/index.md) for usage, methods, supported inputs, extraction, and the Patient List CSV contract. The hosted URL will be added when the site is deployed.
+Versioned structural profiles cover DPC years 2014–2026, with explicit revisions where needed. Source coverage and limits are recorded in `spec/dpc/source_ledger.json`. See the [Japanese documentation](https://open-dpc-jp.pages.dev/) for usage, methods, supported inputs, extraction, and the Patient List CSV contract. The [documentation source](docs/index.md) is also available in this repository.
 
 ## License and citation
 
-Project-owned code is offered under [MIT](LICENSE), subject to the rights review in [NOTICE](NOTICE.md). Third-party publications, official DPC data and master files are not relicensed. See [CITATION.cff](CITATION.cff) for citation metadata and cite the original methods and DPC specification where applicable.
+Project-owned code is offered under [MIT](LICENSE). See [NOTICE](NOTICE.md) for its scope and third-party sources. Third-party publications, official DPC data and master files are not relicensed. See [CITATION.cff](CITATION.cff) for citation metadata and cite the original methods and DPC specification where applicable.
