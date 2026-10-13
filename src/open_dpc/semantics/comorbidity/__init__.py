@@ -36,6 +36,17 @@ def _validate(value):
         prefixes = condition.get("icd10_prefixes")
         if not isinstance(prefixes, list) or not prefixes or any(not isinstance(p, str) or not re.fullmatch(r"[A-Z][0-9]{2}[A-Z0-9]*", p) for p in prefixes):
             raise ValueError("invalid_icd10_prefix")
+        exact = condition.get("exact_icd10_codes", [])
+        if not isinstance(exact, list) or any(
+            not isinstance(p, str) or not re.fullmatch(r"[A-Z][0-9]{2}", p) for p in exact
+        ) or len(set(exact)) != len(exact):
+            raise ValueError("invalid_exact_icd10_code")
+        notes = condition.get("exact_code_notes", {})
+        if not isinstance(notes, dict) or any(
+            code not in exact or note != {"severity_status": "unspecified", "scoring_basis": "minimum_weight"}
+            for code, note in notes.items()
+        ):
+            raise ValueError("invalid_exact_code_notes")
         weight = condition.get("weight")
         if isinstance(weight, bool) or not isinstance(weight, int) or weight < 0:
             raise ValueError("invalid_condition_weight")
@@ -49,6 +60,8 @@ def _validate(value):
             visit(target, active | {key})
     for key in conditions:
         visit(key, set())
+    if "review_related_categories" in value and not isinstance(value["review_related_categories"], bool):
+        raise ValueError("invalid_category_policy")
     return value
 
 
@@ -127,6 +140,10 @@ class CharlsonEvaluator:
     def definition(self) -> dict:
         return dict(self._identity)
 
+    @property
+    def algorithm(self) -> dict:
+        return _algorithm(self._spec)
+
     def evaluate(self, diagnoses: Iterable[dict[str, Any] | str]) -> dict[str, Any]:
         return _evaluate(diagnoses, self._spec, self._identity)
 
@@ -148,8 +165,17 @@ def _evaluate(diagnoses, spec, identity):
                 evidence[key] = item[key]
         facts.append(evidence)
     conditions = {}
+    algorithm = _algorithm(spec)
     for name, condition in spec["conditions"].items():
-        evidence = [fact.copy() for fact in facts if matches_prefixes(fact["icd10"], condition["icd10_prefixes"])]
+        evidence = []
+        for fact in facts:
+            exact = fact["icd10"] in condition.get("exact_icd10_codes", ())
+            if exact or matches_prefixes(fact["icd10"], condition["icd10_prefixes"]):
+                item = fact.copy()
+                if algorithm["version"] == "2":
+                    item["match_type"] = "exact_category" if exact else "prefix"
+                    item.update(_thaw(condition.get("exact_code_notes", {}).get(fact["icd10"], {})))
+                evidence.append(item)
         conditions[name] = {"matched": bool(evidence), "weight": condition["weight"], "counted": bool(evidence), "suppressed_by": [], "evidence": evidence}
     for name, condition in spec["conditions"].items():
         if conditions[name]["matched"]:
@@ -158,13 +184,37 @@ def _evaluate(diagnoses, spec, identity):
                     conditions[target]["counted"] = False
                     conditions[target]["suppressed_by"].append(name)
     score = sum(c["weight"] for c in conditions.values() if c["counted"]) if facts else None
-    return {"semantic_result_version": SEMANTIC_RESULT_VERSION,
+    result = {"semantic_result_version": SEMANTIC_RESULT_VERSION,
             "definition": dict(identity), "weighting": _thaw(spec.get("weighting")),
-            "algorithm": {"id": "charlson-prefix-hierarchy", "version": "1"},
+            "algorithm": algorithm,
             "conditions": conditions, "score": score, "score_scope": "supplied-observations",
             "input_status": "empty" if not records else "partial" if unresolved else "resolved",
             "input_count": len(records), "resolved_count": len(facts), "unresolved": unresolved,
             "warnings": ["unresolved_diagnoses"] if unresolved else []}
+    if spec.get("review_related_categories", False):
+        related = []
+        matched_indices = {item["record_index"] for detail in conditions.values() for item in detail["evidence"]}
+        for fact in facts:
+            code = fact["icd10"]
+            if len(code) != 3 or fact["record_index"] in matched_indices:
+                continue
+            possible = [name for name, condition in spec["conditions"].items()
+                        if any(len(p) > 3 and p.startswith(code) for p in condition["icd10_prefixes"])]
+            if possible:
+                related.append({**fact, "possible_conditions": possible, "status": "insufficient_specificity"})
+        result["category_evidence"] = related
+        if related:
+            result["warnings"].append("insufficient_category_specificity")
+        if any(item.get("severity_status") == "unspecified" for detail in conditions.values() for item in detail["evidence"]):
+            result["warnings"].append("severity_unspecified_minimum_weight")
+    return result
+
+
+def _algorithm(spec):
+    extended = spec.get("review_related_categories", False) or any(
+        condition.get("exact_icd10_codes") for condition in spec["conditions"].values()
+    )
+    return {"id": "charlson-prefix-hierarchy", "version": "2" if extended else "1"}
 
 
 def _freeze(value):

@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "Cite the software version and schema/definition hashes used; cite the original DPC specification and Quan et al. when applicable."
 title: "Open DPC JP"
 type: software
-version: 0.1.0
+version: 0.1.1
 date-released: 2026-09-26
 license: MIT
 url: "https://github.com/sy-wada/open-dpc-jp"

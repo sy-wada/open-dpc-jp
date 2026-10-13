@@ -1,0 +1,1017 @@
+{
+  "date": "2026-10-13",
+  "classification": "Japan ICD-10 (2013)",
+  "categories": [
+    {
+      "category": "E10",
+      "children": [
+        "E100",
+        "E101",
+        "E102",
+        "E103",
+        "E104",
+        "E105",
+        "E106",
+        "E107",
+        "E108",
+        "E109"
+      ],
+      "unmatched_children": [],
+      "possible_conditions": [
+        "diabetes_without_complication",
+        "diabetes_with_complication"
+      ],
+      "decision": "採用：疾患は同定、重症度不明の最低1点",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou04.pdf",
+      "pdf_page": 6
+    },
+    {
+      "category": "E11",
+      "children": [
+        "E110",
+        "E111",
+        "E112",
+        "E113",
+        "E114",
+        "E115",
+        "E116",
+        "E117",
+        "E118",
+        "E119"
+      ],
+      "unmatched_children": [],
+      "possible_conditions": [
+        "diabetes_without_complication",
+        "diabetes_with_complication"
+      ],
+      "decision": "採用：疾患は同定、重症度不明の最低1点",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou04.pdf",
+      "pdf_page": 6
+    },
+    {
+      "category": "E12",
+      "children": [
+        "E120",
+        "E121",
+        "E122",
+        "E123",
+        "E124",
+        "E125",
+        "E126",
+        "E127",
+        "E128",
+        "E129"
+      ],
+      "unmatched_children": [],
+      "possible_conditions": [
+        "diabetes_without_complication",
+        "diabetes_with_complication"
+      ],
+      "decision": "採用：疾患は同定、重症度不明の最低1点",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou04.pdf",
+      "pdf_page": 6
+    },
+    {
+      "category": "E13",
+      "children": [
+        "E130",
+        "E131",
+        "E132",
+        "E133",
+        "E134",
+        "E135",
+        "E136",
+        "E137",
+        "E138",
+        "E139"
+      ],
+      "unmatched_children": [],
+      "possible_conditions": [
+        "diabetes_without_complication",
+        "diabetes_with_complication"
+      ],
+      "decision": "採用：疾患は同定、重症度不明の最低1点",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou04.pdf",
+      "pdf_page": 6
+    },
+    {
+      "category": "E14",
+      "children": [
+        "E140",
+        "E141",
+        "E142",
+        "E143",
+        "E144",
+        "E145",
+        "E146",
+        "E147",
+        "E148",
+        "E149"
+      ],
+      "unmatched_children": [],
+      "possible_conditions": [
+        "diabetes_without_complication",
+        "diabetes_with_complication"
+      ],
+      "decision": "採用：疾患は同定、重症度不明の最低1点",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou04.pdf",
+      "pdf_page": 6
+    },
+    {
+      "category": "F05",
+      "children": [
+        "F050",
+        "F051",
+        "F058",
+        "F059"
+      ],
+      "unmatched_children": [
+        "F050",
+        "F058",
+        "F059"
+      ],
+      "possible_conditions": [
+        "dementia"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou05.pdf",
+      "pdf_page": 6
+    },
+    {
+      "category": "G04",
+      "children": [
+        "G040",
+        "G041",
+        "G042",
+        "G048",
+        "G049"
+      ],
+      "unmatched_children": [
+        "G040",
+        "G042",
+        "G048",
+        "G049"
+      ],
+      "possible_conditions": [
+        "hemiplegia_paraplegia"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou06.pdf",
+      "pdf_page": 5
+    },
+    {
+      "category": "G11",
+      "children": [
+        "G110",
+        "G111",
+        "G112",
+        "G113",
+        "G114",
+        "G118",
+        "G119"
+      ],
+      "unmatched_children": [
+        "G110",
+        "G111",
+        "G112",
+        "G113",
+        "G118",
+        "G119"
+      ],
+      "possible_conditions": [
+        "hemiplegia_paraplegia"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou06.pdf",
+      "pdf_page": 8
+    },
+    {
+      "category": "G31",
+      "children": [
+        "G310",
+        "G311",
+        "G312",
+        "G318",
+        "G319"
+      ],
+      "unmatched_children": [
+        "G310",
+        "G312",
+        "G318",
+        "G319"
+      ],
+      "possible_conditions": [
+        "dementia"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou06.pdf",
+      "pdf_page": 14
+    },
+    {
+      "category": "G80",
+      "children": [
+        "G800",
+        "G801",
+        "G802",
+        "G803",
+        "G804",
+        "G808",
+        "G809"
+      ],
+      "unmatched_children": [
+        "G800",
+        "G803",
+        "G804",
+        "G808",
+        "G809"
+      ],
+      "possible_conditions": [
+        "hemiplegia_paraplegia"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou06.pdf",
+      "pdf_page": 32
+    },
+    {
+      "category": "G83",
+      "children": [
+        "G830",
+        "G831",
+        "G832",
+        "G833",
+        "G834",
+        "G838",
+        "G839"
+      ],
+      "unmatched_children": [
+        "G838"
+      ],
+      "possible_conditions": [
+        "hemiplegia_paraplegia"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou06.pdf",
+      "pdf_page": 33
+    },
+    {
+      "category": "H34",
+      "children": [
+        "H340",
+        "H341",
+        "H342",
+        "H348",
+        "H349"
+      ],
+      "unmatched_children": [
+        "H341",
+        "H342",
+        "H348",
+        "H349"
+      ],
+      "possible_conditions": [
+        "cerebrovascular_disease"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou07.pdf",
+      "pdf_page": 18
+    },
+    {
+      "category": "I09",
+      "children": [
+        "I090",
+        "I091",
+        "I092",
+        "I098",
+        "I099"
+      ],
+      "unmatched_children": [
+        "I090",
+        "I091",
+        "I092",
+        "I098"
+      ],
+      "possible_conditions": [
+        "congestive_heart_failure"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou09.pdf",
+      "pdf_page": 5
+    },
+    {
+      "category": "I11",
+      "children": [
+        "I110",
+        "I119"
+      ],
+      "unmatched_children": [
+        "I119"
+      ],
+      "possible_conditions": [
+        "congestive_heart_failure"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou09.pdf",
+      "pdf_page": 6
+    },
+    {
+      "category": "I12",
+      "children": [
+        "I120",
+        "I129"
+      ],
+      "unmatched_children": [
+        "I129"
+      ],
+      "possible_conditions": [
+        "renal_disease"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou09.pdf",
+      "pdf_page": 6
+    },
+    {
+      "category": "I13",
+      "children": [
+        "I130",
+        "I131",
+        "I132",
+        "I139"
+      ],
+      "unmatched_children": [
+        "I139"
+      ],
+      "possible_conditions": [
+        "congestive_heart_failure",
+        "renal_disease"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou09.pdf",
+      "pdf_page": 7
+    },
+    {
+      "category": "I25",
+      "children": [
+        "I250",
+        "I251",
+        "I252",
+        "I253",
+        "I254",
+        "I255",
+        "I256",
+        "I258",
+        "I259"
+      ],
+      "unmatched_children": [
+        "I250",
+        "I251",
+        "I253",
+        "I254",
+        "I256",
+        "I258",
+        "I259"
+      ],
+      "possible_conditions": [
+        "myocardial_infarction",
+        "congestive_heart_failure"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou09.pdf",
+      "pdf_page": 11
+    },
+    {
+      "category": "I27",
+      "children": [
+        "I270",
+        "I271",
+        "I272",
+        "I278",
+        "I279"
+      ],
+      "unmatched_children": [
+        "I270",
+        "I271",
+        "I272"
+      ],
+      "possible_conditions": [
+        "chronic_pulmonary_disease"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou09.pdf",
+      "pdf_page": 13
+    },
+    {
+      "category": "I42",
+      "children": [
+        "I420",
+        "I421",
+        "I422",
+        "I423",
+        "I424",
+        "I425",
+        "I426",
+        "I427",
+        "I428",
+        "I429"
+      ],
+      "unmatched_children": [
+        "I421",
+        "I422",
+        "I423",
+        "I424"
+      ],
+      "possible_conditions": [
+        "congestive_heart_failure"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou09.pdf",
+      "pdf_page": 19
+    },
+    {
+      "category": "I73",
+      "children": [
+        "I730",
+        "I731",
+        "I738",
+        "I739"
+      ],
+      "unmatched_children": [
+        "I730"
+      ],
+      "possible_conditions": [
+        "peripheral_vascular_disease"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou09.pdf",
+      "pdf_page": 33
+    },
+    {
+      "category": "I77",
+      "children": [
+        "I770",
+        "I771",
+        "I772",
+        "I773",
+        "I774",
+        "I775",
+        "I776",
+        "I778",
+        "I779"
+      ],
+      "unmatched_children": [
+        "I770",
+        "I772",
+        "I773",
+        "I774",
+        "I775",
+        "I776",
+        "I778",
+        "I779"
+      ],
+      "possible_conditions": [
+        "peripheral_vascular_disease"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou09.pdf",
+      "pdf_page": 35
+    },
+    {
+      "category": "I79",
+      "children": [
+        "I790",
+        "I791",
+        "I792",
+        "I798"
+      ],
+      "unmatched_children": [
+        "I791",
+        "I798"
+      ],
+      "possible_conditions": [
+        "peripheral_vascular_disease"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou09.pdf",
+      "pdf_page": 36
+    },
+    {
+      "category": "I85",
+      "children": [
+        "I850",
+        "I859"
+      ],
+      "unmatched_children": [],
+      "possible_conditions": [
+        "moderate_severe_liver_disease"
+      ],
+      "decision": "採用：全細分類が重症肝疾患（3点）",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou09.pdf",
+      "pdf_page": 39
+    },
+    {
+      "category": "I86",
+      "children": [
+        "I860",
+        "I861",
+        "I862",
+        "I863",
+        "I864",
+        "I868"
+      ],
+      "unmatched_children": [
+        "I860",
+        "I861",
+        "I862",
+        "I863",
+        "I868"
+      ],
+      "possible_conditions": [
+        "moderate_severe_liver_disease"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou09.pdf",
+      "pdf_page": 39
+    },
+    {
+      "category": "I98",
+      "children": [
+        "I980",
+        "I981",
+        "I982",
+        "I983",
+        "I988"
+      ],
+      "unmatched_children": [
+        "I980",
+        "I981",
+        "I988"
+      ],
+      "possible_conditions": [
+        "moderate_severe_liver_disease"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou09.pdf",
+      "pdf_page": 42
+    },
+    {
+      "category": "J68",
+      "children": [
+        "J680",
+        "J681",
+        "J682",
+        "J683",
+        "J684",
+        "J688",
+        "J689"
+      ],
+      "unmatched_children": [
+        "J680",
+        "J681",
+        "J682",
+        "J683",
+        "J688",
+        "J689"
+      ],
+      "possible_conditions": [
+        "chronic_pulmonary_disease"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou10.pdf",
+      "pdf_page": 26
+    },
+    {
+      "category": "J70",
+      "children": [
+        "J700",
+        "J701",
+        "J702",
+        "J703",
+        "J704",
+        "J708",
+        "J709"
+      ],
+      "unmatched_children": [
+        "J700",
+        "J702",
+        "J704",
+        "J708",
+        "J709"
+      ],
+      "possible_conditions": [
+        "chronic_pulmonary_disease"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou10.pdf",
+      "pdf_page": 27
+    },
+    {
+      "category": "K55",
+      "children": [
+        "K550",
+        "K551",
+        "K552",
+        "K558",
+        "K559"
+      ],
+      "unmatched_children": [
+        "K550",
+        "K552"
+      ],
+      "possible_conditions": [
+        "peripheral_vascular_disease"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou11.pdf",
+      "pdf_page": 30
+    },
+    {
+      "category": "K70",
+      "children": [
+        "K700",
+        "K701",
+        "K702",
+        "K703",
+        "K704",
+        "K709"
+      ],
+      "unmatched_children": [],
+      "possible_conditions": [
+        "mild_liver_disease",
+        "moderate_severe_liver_disease"
+      ],
+      "decision": "採用：疾患は同定、重症度不明の最低1点",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou11.pdf",
+      "pdf_page": 40
+    },
+    {
+      "category": "K71",
+      "children": [
+        "K710",
+        "K711",
+        "K712",
+        "K713",
+        "K714",
+        "K715",
+        "K716",
+        "K717",
+        "K718",
+        "K719"
+      ],
+      "unmatched_children": [
+        "K710",
+        "K712",
+        "K716",
+        "K718",
+        "K719"
+      ],
+      "possible_conditions": [
+        "mild_liver_disease",
+        "moderate_severe_liver_disease"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou11.pdf",
+      "pdf_page": 40
+    },
+    {
+      "category": "K72",
+      "children": [
+        "K720",
+        "K721",
+        "K729"
+      ],
+      "unmatched_children": [
+        "K720"
+      ],
+      "possible_conditions": [
+        "moderate_severe_liver_disease"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou11.pdf",
+      "pdf_page": 41
+    },
+    {
+      "category": "K76",
+      "children": [
+        "K760",
+        "K761",
+        "K762",
+        "K763",
+        "K764",
+        "K765",
+        "K766",
+        "K767",
+        "K768",
+        "K769"
+      ],
+      "unmatched_children": [
+        "K761"
+      ],
+      "possible_conditions": [
+        "mild_liver_disease",
+        "moderate_severe_liver_disease"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou11.pdf",
+      "pdf_page": 44
+    },
+    {
+      "category": "M31",
+      "children": [
+        "M310",
+        "M311",
+        "M312",
+        "M313",
+        "M314",
+        "M315",
+        "M316",
+        "M317",
+        "M318",
+        "M319"
+      ],
+      "unmatched_children": [
+        "M310",
+        "M311",
+        "M312",
+        "M313",
+        "M314",
+        "M316",
+        "M317",
+        "M318",
+        "M319"
+      ],
+      "possible_conditions": [
+        "rheumatic_disease"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou13.pdf",
+      "pdf_page": 20
+    },
+    {
+      "category": "M35",
+      "children": [
+        "M350",
+        "M351",
+        "M352",
+        "M353",
+        "M354",
+        "M355",
+        "M356",
+        "M357",
+        "M358",
+        "M359"
+      ],
+      "unmatched_children": [
+        "M350",
+        "M352",
+        "M354",
+        "M355",
+        "M356",
+        "M357",
+        "M358",
+        "M359"
+      ],
+      "possible_conditions": [
+        "rheumatic_disease"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou13.pdf",
+      "pdf_page": 22
+    },
+    {
+      "category": "M36",
+      "children": [
+        "M360",
+        "M361",
+        "M362",
+        "M363",
+        "M364",
+        "M368"
+      ],
+      "unmatched_children": [
+        "M361",
+        "M362",
+        "M363",
+        "M364",
+        "M368"
+      ],
+      "possible_conditions": [
+        "rheumatic_disease"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou13.pdf",
+      "pdf_page": 23
+    },
+    {
+      "category": "N03",
+      "children": [
+        "N030",
+        "N031",
+        "N032",
+        "N033",
+        "N034",
+        "N035",
+        "N036",
+        "N037",
+        "N038",
+        "N039"
+      ],
+      "unmatched_children": [
+        "N030",
+        "N031",
+        "N038",
+        "N039"
+      ],
+      "possible_conditions": [
+        "renal_disease"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou14.pdf",
+      "pdf_page": 2
+    },
+    {
+      "category": "N05",
+      "children": [
+        "N050",
+        "N051",
+        "N052",
+        "N053",
+        "N054",
+        "N055",
+        "N056",
+        "N057",
+        "N058",
+        "N059"
+      ],
+      "unmatched_children": [
+        "N050",
+        "N051",
+        "N058",
+        "N059"
+      ],
+      "possible_conditions": [
+        "renal_disease"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou14.pdf",
+      "pdf_page": 2
+    },
+    {
+      "category": "N25",
+      "children": [
+        "N250",
+        "N251",
+        "N258",
+        "N259"
+      ],
+      "unmatched_children": [
+        "N251",
+        "N258",
+        "N259"
+      ],
+      "possible_conditions": [
+        "renal_disease"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou14.pdf",
+      "pdf_page": 14
+    },
+    {
+      "category": "P29",
+      "children": [
+        "P290",
+        "P291",
+        "P292",
+        "P293",
+        "P294",
+        "P298",
+        "P299"
+      ],
+      "unmatched_children": [
+        "P291",
+        "P292",
+        "P293",
+        "P294",
+        "P298",
+        "P299"
+      ],
+      "possible_conditions": [
+        "congestive_heart_failure"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou16.pdf",
+      "pdf_page": 15
+    },
+    {
+      "category": "Z49",
+      "children": [
+        "Z490",
+        "Z491",
+        "Z492"
+      ],
+      "unmatched_children": [],
+      "possible_conditions": [
+        "renal_disease"
+      ],
+      "decision": "採用：全細分類が腎疾患（2点）。透析種別は不明",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou21.pdf",
+      "pdf_page": 20
+    },
+    {
+      "category": "Z94",
+      "children": [
+        "Z940",
+        "Z941",
+        "Z942",
+        "Z943",
+        "Z944",
+        "Z945",
+        "Z946",
+        "Z947",
+        "Z948",
+        "Z949"
+      ],
+      "unmatched_children": [
+        "Z941",
+        "Z942",
+        "Z943",
+        "Z945",
+        "Z946",
+        "Z947",
+        "Z948",
+        "Z949"
+      ],
+      "possible_conditions": [
+        "mild_liver_disease",
+        "renal_disease"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou21.pdf",
+      "pdf_page": 44
+    },
+    {
+      "category": "Z95",
+      "children": [
+        "Z950",
+        "Z951",
+        "Z952",
+        "Z953",
+        "Z954",
+        "Z955",
+        "Z958",
+        "Z959"
+      ],
+      "unmatched_children": [
+        "Z950",
+        "Z951",
+        "Z952",
+        "Z953",
+        "Z954",
+        "Z955"
+      ],
+      "possible_conditions": [
+        "peripheral_vascular_disease"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou21.pdf",
+      "pdf_page": 44
+    },
+    {
+      "category": "Z99",
+      "children": [
+        "Z990",
+        "Z991",
+        "Z992",
+        "Z993",
+        "Z994",
+        "Z998",
+        "Z999"
+      ],
+      "unmatched_children": [
+        "Z990",
+        "Z991",
+        "Z993",
+        "Z994",
+        "Z998",
+        "Z999"
+      ],
+      "possible_conditions": [
+        "renal_disease"
+      ],
+      "decision": "陽性へ拡張しない：対象外細分類を含む。カテゴリーのみなら参考・推定No抑止",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou21.pdf",
+      "pdf_page": 46
+    }
+  ],
+  "source_hashes": {
+    "4": "25aca62f75566d4b309dcfa534b95965df34122155638e594f713bb2c3e7fe81",
+    "5": "fdc67d3c84f68d7510665a58b0066943eb5fee1d30435e0a9d6725fc94a9e94c",
+    "6": "50755b251877fd0bff4588da35a450451f98e14cb5bac5ebfc09bff33572c68f",
+    "7": "e461cd0b9d60e562fc5babc71db9a53634239ed611a1cb6d37a0ce34a72eb114",
+    "9": "14bb21cecaab5a7fd5d04426fbf6a192c8783c3b72b3b0c6ca49cf52f65f9913",
+    "10": "c6ba23cef8a55260ae8208b333bbae4f6e7d73121fc17b67bd965e11fcff7b2a",
+    "11": "4ffddb83aa9d44809b2fa1a2ff43c3860448c840053f12fd5980cd58fcd06108",
+    "13": "2effb56a99f7839b194e9eda8165492d8aef49a6cb06014ab5086b0b466e86c3",
+    "14": "9df0d77746f435a5122e242cb383eef81addd4299a63897a89971b52d13674a7",
+    "16": "05ea9791e958c07f5f386d47390cd9601488c25515482499148a53be7bb75ae7",
+    "21": "069b657d7efebd5d3b71656e1d2345d9c348693e19ab14dc95d155d10f79a7ce"
+  }
+}
