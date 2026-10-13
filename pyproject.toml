@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "open-dpc-jp"
-version = "0.1.0"
+version = "0.1.1"
 description = "DPC FF1/EF readers, versioned schemas, and research algorithms for Japan"
 readme = "README.md"
 requires-python = ">=3.12"
@@ -30,7 +30,7 @@ release = ["build==1.3.0", "twine==6.2.0"]
 
 [tool.hatch.build.targets.sdist]
 exclude = ["**/__pycache__", "**/*.pyc", "site", "dist", "web/*.test.mjs"]
-include = ["src", "spec", "conformance", "tests", "tools", "extraction", "docs", "web", "build_site.py", "zensical.toml", "README.md", "README_ja.md", "CHANGELOG.md", "MIRAI-ID-CCI-PROVENANCE.md", "NOTICE.md", "CITATION.cff", "LICENSE", "RELEASE-CHECKLIST.md", "pyproject.toml"]
+include = ["src", "spec", "conformance", "tests", "tools", "extraction", "docs", "web", "build_site.py", "zensical.toml", "README.md", "README_ja.md", "CHANGELOG.md", "MIRAI-ID-CCI-PROVENANCE.md", "CCI-CATEGORY-SCREENING.md", "NOTICE.md", "CITATION.cff", "LICENSE", "RELEASE-CHECKLIST.md", "pyproject.toml"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/open_dpc", "src/open_dpc_jp"]

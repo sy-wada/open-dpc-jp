@@ -13,12 +13,13 @@ QUAN_SHA256 = "dde7a7630e2bbaabd9a4d9ad07a989ad339f404fb57c7ae2b76846d02a43120e"
 
 
 class MiraiCciTests(unittest.TestCase):
-    def test_complete_definition_is_quan_plus_three_documented_prefixes(self):
+    def test_complete_definition_is_quan_plus_documented_extensions(self):
         quan, quan_identity = load_definition("quan-2005", version="1")
         mirai, mirai_identity = load_definition("mirai-id-cci", version="1")
         self.assertEqual(len(quan["conditions"]), 17)
         self.assertEqual(set(mirai["conditions"]), set(quan["conditions"]))
-        additions = {"malignancy": {"C86", "D45"}, "aids_hiv": {"B23"}}
+        additions = {"malignancy": {"C86", "D45"}, "aids_hiv": {"B23"},
+                     "peripheral_vascular_disease": {"I74"}, "moderate_severe_liver_disease": {"I983"}}
         for name, expected in quan["conditions"].items():
             actual = mirai["conditions"][name]
             self.assertEqual(set(actual["icd10_prefixes"]), set(expected["icd10_prefixes"]) | additions.get(name, set()), name)
@@ -36,7 +37,7 @@ class MiraiCciTests(unittest.TestCase):
     def test_membership_boundaries_and_no_extension_leakage(self):
         cases = {
             "peripheral_vascular_disease": {"yes": ["I731", "I738", "I739", "I771", "K551", "Z958"],
-                                            "no": ["I730", "I740", "I772"]},
+                                            "no": ["I730", "I772"]},
             "cerebrovascular_disease": {"yes": ["H340", "I650", "I660", "I670", "I680", "I690"]},
             "diabetes_with_complication": {"yes": ["E102", "E105", "E107"], "no": ["E106", "E108"]},
             "diabetes_without_complication": {"yes": ["E106", "E108"], "no": ["E102", "E105", "E107"]},

@@ -9,7 +9,7 @@ class PublicNamespace(unittest.TestCase):
         from open_dpc_jp.semantics.comorbidity import calculate_charlson
         from open_dpc.parsing import parse_ef as legacy_parse_ef
 
-        self.assertEqual(open_dpc_jp.__version__, "0.1.0")
+        self.assertEqual(open_dpc_jp.__version__, "0.1.1")
         self.assertIs(parse_ef, legacy_parse_ef)
         self.assertTrue(callable(parse_ff1))
         self.assertEqual(resolve_schema(schema_id="dpc-2025-20250530").schema_id, "dpc-2025-20250530")

@@ -60,7 +60,8 @@
         "K558",
         "K559",
         "Z958",
-        "Z959"
+        "Z959",
+        "I74"
       ],
       "weight": 1
     },
@@ -165,7 +166,16 @@
         "K769",
         "Z944"
       ],
-      "weight": 1
+      "weight": 1,
+      "exact_icd10_codes": [
+        "K70"
+      ],
+      "exact_code_notes": {
+        "K70": {
+          "severity_status": "unspecified",
+          "scoring_basis": "minimum_weight"
+        }
+      }
     },
     "diabetes_without_complication": {
       "icd10_prefixes": [
@@ -195,7 +205,36 @@
         "E148",
         "E149"
       ],
-      "weight": 1
+      "weight": 1,
+      "exact_icd10_codes": [
+        "E10",
+        "E11",
+        "E12",
+        "E13",
+        "E14"
+      ],
+      "exact_code_notes": {
+        "E10": {
+          "severity_status": "unspecified",
+          "scoring_basis": "minimum_weight"
+        },
+        "E11": {
+          "severity_status": "unspecified",
+          "scoring_basis": "minimum_weight"
+        },
+        "E12": {
+          "severity_status": "unspecified",
+          "scoring_basis": "minimum_weight"
+        },
+        "E13": {
+          "severity_status": "unspecified",
+          "scoring_basis": "minimum_weight"
+        },
+        "E14": {
+          "severity_status": "unspecified",
+          "scoring_basis": "minimum_weight"
+        }
+      }
     },
     "diabetes_with_complication": {
       "icd10_prefixes": [
@@ -272,7 +311,10 @@
         "Z940",
         "Z992"
       ],
-      "weight": 2
+      "weight": 2,
+      "exact_icd10_codes": [
+        "Z49"
+      ]
     },
     "malignancy": {
       "icd10_prefixes": [
@@ -376,11 +418,15 @@
         "K729",
         "K765",
         "K766",
-        "K767"
+        "K767",
+        "I983"
       ],
       "weight": 3,
       "suppresses": [
         "mild_liver_disease"
+      ],
+      "exact_icd10_codes": [
+        "I85"
       ]
     },
     "metastatic_solid_tumor": {
@@ -432,6 +478,26 @@
       ],
       "reason": "C86 identifies T/NK-cell lymphoma; D45 is malignant in ICD-O-3 and retained in legacy study coding.",
       "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou02.pdf"
+    },
+    "peripheral_vascular_disease": {
+      "added_prefixes": [
+        "I74"
+      ],
+      "reason": "Arterial embolism/thrombosis as a MIRAI-ID extension, including acute arterial insufficiency. Not part of Quan Table 1.",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou09.pdf"
+    },
+    "moderate_severe_liver_disease": {
+      "added_prefixes": [
+        "I983"
+      ],
+      "reason": "Current Japanese ICD-10 separates bleeding oesophageal varices in diseases classified elsewhere as I98.3.",
+      "source": "https://www.mhlw.go.jp/toukei/sippei/dl/naiyou09.pdf"
     }
+  },
+  "review_related_categories": true,
+  "development_revision": {
+    "date": "2026-10-13",
+    "status": "pre-study",
+    "previous_snapshot": "archive/mirai-id-cci-v1-20260923.json"
   }
 }

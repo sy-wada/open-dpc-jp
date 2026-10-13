@@ -164,6 +164,8 @@ def compile_all(root: Path, *, check: bool = False):
     outputs[target / "source_ledger.json"] = encode(ledger)
     for path in (root / "spec/semantics").glob("*.json"):
         outputs[root / "src/open_dpc/semantics/comorbidity/definitions" / path.name] = path.read_bytes()
+    for path in (root / "spec/semantics/archive").glob("*.json"):
+        outputs[root / "src/open_dpc/semantics/comorbidity/definitions/archive" / path.name] = path.read_bytes()
     for path, data in outputs.items():
         if check:
             if not path.is_file() or path.read_bytes() != data:

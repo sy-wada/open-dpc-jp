@@ -4,6 +4,11 @@
 
 **Open Diagnosis Procedure Combination for Japan** は、日本の DPC FF1/EF データを年度・改訂別 profile に基づき構造的に読み込む Python ライブラリです。版付き Charlson Comorbidity Index 定義も提供します。公開初版は `0.1.0` です。
 
+**0.1.1**では開発中のMIRAI-ID CCI v1を改訂し、3桁カテゴリー入力とI74/I983へ対応しました。
+標準Quanは保持します。[CCIの方法](https://open-dpc-jp.pages.dev/methods/cci/)、
+[43カテゴリーの照合](CCI-CATEGORY-SCREENING.md)、[由来](MIRAI-ID-CCI-PROVENANCE.md)に、
+重症度不明の最低点・細分類不足・package版とhashによる旧結果再現を記載しています。
+
 ## 範囲
 
 core の入口は library API です。DPC 抽出 script は同じ repository の別 utility として公開します。ブラウザ専用 Patient List Generator は抽出用 CSV を作成します。臨床患者データ、公式マスタ、CaseCurator の研究別規則・保存・REDCap export は含みません。構造的読込は DPC 提出や臨床妥当性の完全な検証ではありません。
