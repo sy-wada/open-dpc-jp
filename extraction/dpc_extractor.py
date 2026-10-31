@@ -164,20 +164,34 @@ def collect_target_files(
     )
 
 
+def get_file_month(file_path: Path) -> Optional[str]:
+    """Read the third filename token as YYYYMM; never truncate a digit run."""
+    parts = file_path.stem.split("_")
+    if len(parts) < 3:
+        return None
+    match = re.match(r"^([0-9]+)", parts[2])
+    if not match:
+        return None
+    token = match.group(1)
+    if len(token) == 4:
+        token = "20" + token
+    elif len(token) != 6:
+        return None
+    year, month = int(token[:4]), int(token[4:])
+    return token if 1 <= year <= 9999 and 1 <= month <= 12 else None
+
+
 def get_sub_dir_name(
     file_path: Path,
     logger: Optional[Logger] = None,
     ) -> str:
-    """
-    例:
-      EFn_123456789_1504.txt -> 1504
-    """
-    parts = file_path.stem.split("_")
-    if len(parts) < 3:
+    """Return the normalized YYMM output directory, or xxxx for invalid names."""
+    month = get_file_month(file_path)
+    if month is None:
         if logger is not None:
             logger(f"想定外のファイル名です: {file_path.name}")
-        return 'xxxx'  # 処理対象にはしておくが、隔離されたファイルとして扱う
-    return parts[2]
+        return "xxxx"
+    return month[2:]
 
 
 def build_output_path(
@@ -241,6 +255,16 @@ def yymm_strings_for_period(
     [start_date - margin_before_days, end_date + margin_after_days]
     に一度でも含まれる月を '%y%m' で昇順列挙する。
     """
+    return [month[2:] for month in yyyymm_strings_for_period(
+        pt_record, margin_before_days=margin_before_days,
+        margin_after_days=margin_after_days,
+    )]
+
+
+def yyyymm_strings_for_period(
+    pt_record: dict, *, margin_before_days: int = 0, margin_after_days: int = 0,
+) -> List[str]:
+    """Enumerate full calendar months intersecting the encounter plus margin."""
     start_date = datetime.strptime(pt_record['encounter_start_date'], '%Y%m%d')
     end_date = datetime.strptime(pt_record['encounter_end_date'], '%Y%m%d')
 
@@ -254,7 +278,7 @@ def yymm_strings_for_period(
     for idx in range(start_idx, end_idx + 1):
         year, month0 = divmod(idx, 12)
         month = month0 + 1
-        result.append(f"{year % 100:02d}{month:02d}")
+        result.append(f"{year:04d}{month:02d}")
 
     return result
 
@@ -350,10 +374,12 @@ def process_one_file(
     ./outputs/<research_id>/<sub_dir_name>/<file_name>
     に保存する。
 
-    main 側でファイル名 YYMM が全患者分の和集合に含まれるものに絞ったうえで呼ばれる。
-    行ごとに data_identifier が pt_list にあり、かつ当該ファイルの YYMM (sub_dir_name) が
-    その患者の encounter±margin に対応する月集合 (_yymm_set) に含まれる場合のみ出力する。
+    main と同じ YYYYMM 判定で患者ごとの encounter±margin に絞る。
+    出力月ディレクトリは YYMM、元ファイル名は保持する。
     """
+    file_month = get_file_month(file_path)
+    if file_month is None:
+        raise ValueError("invalid_filename_month")
     decided_delimiter, decided_encoding = detect_csv_format(file_path,
                                  delimiter=delimiter, encoding=dpc_file_encoding)
     sub_dir_name = get_sub_dir_name(file_path, logger=logger)
@@ -398,7 +424,7 @@ def process_one_file(
 
                 if data_identifier in pt_list:
                     pt_record = pt_list[data_identifier]
-                    if sub_dir_name not in pt_record["_yymm_set"]:
+                    if file_month not in pt_record["_yyyymm_set"]:
                         continue
 
                     # 出力データの data_identifier は research_id に置換する
@@ -495,7 +521,9 @@ def write_summary_csv(
             efg_count = 0
 
             if base_dir.exists() and base_dir.is_dir():
-                for path in base_dir.rglob("*.txt"):
+                for path in base_dir.rglob("*"):
+                    if not path.is_file() or path.suffix.lower() != ".txt":
+                        continue
                     name = path.name
                     name_upper = name.upper()
                     if name_upper.startswith("FF1_"):
@@ -523,36 +551,31 @@ def main(
     write_chunk_size: int = WRITE_CHUNK_SIZE,
     ) -> Dict[str, object]:
     """
-    pt_list を読み、各患者に encounter±margin の月リストと _yymm_set を付与する。
-    ファイルは名前の YYMM が全患者の月の和集合に含まれるものだけを対象とし、
-    各ファイル内では患者ごとの _yymm_set で行をさらに絞る（process_one_file）。
+    encounter±margin の YYYYMM 集合でファイルと患者別の行を絞る。
     """
     started_at = datetime.now()
     pt_list = load_pt_list(Path(target_sheet), logger=logger)
     output_root.mkdir(parents=True, exist_ok=True)
     for pt_record in pt_list.values():
-        yy_list = yymm_strings_for_period(
+        month_list = yyyymm_strings_for_period(
             pt_record,
             margin_before_days=margin_before_days,
             margin_after_days=margin_after_days,
         )
-        pt_record["yymm_strings_for_period"] = yy_list
-        pt_record["_yymm_set"] = set(yy_list)
+        pt_record["_yyyymm_set"] = set(month_list)
 
     matched_files = collect_target_files(root_dir)
 
-    # ファイル名 YYMM が「全患者の encounter±margin 月」の和集合に含まれるものだけを開く
-    yymm_set = set(
+    month_set = set(
         chain.from_iterable(
-            pt_record["yymm_strings_for_period"] for pt_record in pt_list.values()
+            pt_record["_yyyymm_set"] for pt_record in pt_list.values()
         )
     )
-    # `_` で分割して 3番目の要素の先頭文字4つが yymm_set に含まれるものだけを開く
-    # 典型例: EFn_123456789_1504.txt -> 1504
-    # 末尾に不要な文字がついても対応させる: FF1_123456789_1504-1.txt -> 1504
+    invalid_month_count = sum(get_file_month(path) is None for path in matched_files)
+    logger(f"不正なファイル名年月による除外数: {invalid_month_count}")
     matched_files = [
         path for path in matched_files
-        if len(path.stem.split("_")) >= 3 and path.stem.split("_")[2][:4] in yymm_set
+        if get_file_month(path) in month_set
     ]
     total_files = len(matched_files)
 

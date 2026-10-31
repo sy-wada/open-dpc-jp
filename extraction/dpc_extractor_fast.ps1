@@ -53,12 +53,9 @@ function Get-SubDirNameFast {
         [string]$FilePath
     )
 
-    $name = [System.IO.Path]::GetFileNameWithoutExtension($FilePath)
-    $parts = $name.Split('_')
-    if ($parts.Length -lt 3) {
-        return "xxxx"
-    }
-    return $parts[2]
+    $month = [FastDpc51.Engine]::GetFileMonth($FilePath)
+    if ($null -eq $month) { return "xxxx" }
+    return $month.Substring(2)
 }
 
 function Collect-TargetFilesFast {
@@ -96,7 +93,7 @@ namespace FastDpc51
     public sealed class PtRecord
     {
         public string ResearchId;
-        public HashSet<string> YymmSet;
+        public HashSet<string> MonthSet;
     }
 
     public sealed class ProcessResult
@@ -135,6 +132,20 @@ namespace FastDpc51
 
     public static class Engine
     {
+        public static string GetFileMonth(string path)
+        {
+            string[] parts = Path.GetFileNameWithoutExtension(path).Split('_');
+            if (parts.Length < 3) return null;
+            Match match = Regex.Match(parts[2], @"^([0-9]+)");
+            if (!match.Success) return null;
+            string token = match.Groups[1].Value;
+            if (token.Length == 4) token = "20" + token;
+            else if (token.Length != 6) return null;
+            int year = int.Parse(token.Substring(0, 4), CultureInfo.InvariantCulture);
+            int month = int.Parse(token.Substring(4, 2), CultureInfo.InvariantCulture);
+            return year >= 1 && month >= 1 && month <= 12 ? token : null;
+        }
+
         private static string[] SplitCsvLine(string line, char delimiter)
         {
             List<string> fields = new List<string>(16);
@@ -179,7 +190,7 @@ namespace FastDpc51
             return fields.ToArray();
         }
 
-        private static HashSet<string> BuildYymmSet(string startText, string endText, int marginBeforeDays, int marginAfterDays)
+        private static HashSet<string> BuildMonthSet(string startText, string endText, int marginBeforeDays, int marginAfterDays)
         {
             DateTime startDate = DateTime.ParseExact(startText, "yyyyMMdd", CultureInfo.InvariantCulture);
             DateTime endDate = DateTime.ParseExact(endText, "yyyyMMdd", CultureInfo.InvariantCulture);
@@ -195,7 +206,7 @@ namespace FastDpc51
             {
                 int year = idx / 12;
                 int month = (idx % 12) + 1;
-                set.Add(string.Format(CultureInfo.InvariantCulture, "{0:D2}{1:D2}", year % 100, month));
+                set.Add(string.Format(CultureInfo.InvariantCulture, "{0:D4}{1:D2}", year, month));
             }
             return set;
         }
@@ -306,7 +317,7 @@ namespace FastDpc51
 
                     PtRecord rec = new PtRecord();
                     rec.ResearchId = researchId;
-                    rec.YymmSet = BuildYymmSet(encounterStart, encounterEnd, marginBeforeDays, marginAfterDays);
+                    rec.MonthSet = BuildMonthSet(encounterStart, encounterEnd, marginBeforeDays, marginAfterDays);
 
                     map.Add(dataIdentifier, rec);
                 }
@@ -319,12 +330,12 @@ namespace FastDpc51
             return map;
         }
 
-        public static HashSet<string> BuildGlobalYymmSet(Dictionary<string, PtRecord> ptMap)
+        public static HashSet<string> BuildGlobalMonthSet(Dictionary<string, PtRecord> ptMap)
         {
             HashSet<string> set = new HashSet<string>(StringComparer.Ordinal);
             foreach (PtRecord rec in ptMap.Values)
             {
-                foreach (string yymm in rec.YymmSet)
+                foreach (string yymm in rec.MonthSet)
                 {
                     set.Add(yymm);
                 }
@@ -485,6 +496,7 @@ namespace FastDpc51
             Dictionary<string, OutputState> outputs = new Dictionary<string, OutputState>(StringComparer.Ordinal);
             ProcessResult result = new ProcessResult();
             string headerLine = null;
+            string fileMonth = GetFileMonth(filePath);
 
             try
             {
@@ -515,7 +527,7 @@ namespace FastDpc51
                             continue;
                         }
 
-                        if (!rec.YymmSet.Contains(subDirName))
+                        if (!rec.MonthSet.Contains(fileMonth))
                         {
                             continue;
                         }
@@ -648,19 +660,25 @@ $delimiterChar = $Delimiter[0]
 
 Write-Host ("pt_list を読み込み中: {0}" -f $targetSheetFull)
 $ptMap = [FastDpc51.Engine]::LoadPtList($targetSheetFull, $inputEncoding, $MarginDays, $MarginDays)
-$globalYymm = [FastDpc51.Engine]::BuildGlobalYymmSet($ptMap)
+$globalMonth = [FastDpc51.Engine]::BuildGlobalMonthSet($ptMap)
 
 Write-Host ("対象ファイルを列挙中: {0}" -f $rootDir)
 $allFiles = @(Collect-TargetFilesFast -RootDir $rootDir)
 
 $matchedFiles = New-Object 'System.Collections.Generic.List[string]'
+$invalidMonthCount = 0
 foreach ($file in $allFiles) {
-    $yymm = Get-SubDirNameFast -FilePath $file
-    if ($yymm.Length -ge 4 -and $globalYymm.Contains($yymm.Substring(0, 4))) {
+    $month = [FastDpc51.Engine]::GetFileMonth($file)
+    if ($null -eq $month) {
+        $invalidMonthCount++
+        continue
+    }
+    if ($globalMonth.Contains($month)) {
         $matchedFiles.Add($file)
     }
 }
 
+Write-Host ("不正なファイル名年月による除外数: {0}" -f $invalidMonthCount)
 $totalFiles = $matchedFiles.Count
 if ($totalFiles -eq 0) {
     Write-Host "対象ファイルは見つかりませんでした。"
