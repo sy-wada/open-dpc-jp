@@ -23,7 +23,7 @@
     "docs/index.md": "de302d00ebb0565ed328837f313bf32956b90843b6cc92793978bf4f9540b975",
     "extraction/dpc_extractor.py": "7b19db9f39ce051d38f34ac91aa188942c4bf8689e1d365ad0e7c95cffc0dbc9",
     "extraction/dpc_extractor_fast.ps1": "86cc81630088cb0f63cb92ec03e4bd259c3dd3f32a25e2e4f9cd6ec63126ec4e",
-    "extraction/README.md": "b264f955de83b86b2c2faaf7c369876a1a9b06bd1abc0df3bab5ef2c120cad63",
+    "extraction/README.md": "6971fec1b0e4dbcd0eb139a755de25784064327cf46868880dd62bc400d99b10",
     "tests/standalone.py": "a4e1fde23fdc76ceb765c2a09f0c6e8efa950a9b04c7e7cc1875e16b32042557",
     "tests/test_charlson.py": "c4f19e60ddedf79fd4262201e1f40876d10915169be5e67ee8253f72cb5804e5",
     "tests/test_diagnosis_certainty.py": "61312aabec6f0791b9003ee5449c3a5acdb454852720a3574afc64c1f568de81",
@@ -114,7 +114,7 @@
     "docs/reference/python-api.md": "10efa39134effa76976c7142e6ca6b9f836898e96a674e55906b09ace6461262",
     "docs/specifications/dpc-files.md": "ea5e9785ac645a1ebb4bb6c4a8198bb8d61656986fac7a01ecee1c7e44e15f41",
     "docs/specifications/patient-list.md": "f9955800c4e09d2833737d3e1bf700b02f226df617e57781e58ca6d2a506dfc8",
-    "docs/tools/dpc-extraction.md": "61c80f775c7171c5702fcea4ff0e6f44151faafe4adb65959665707c9e0426c3",
+    "docs/tools/dpc-extraction.md": "bc3e9e9a674f3ae0858e36e73019764f3229ec68af5cb3206869c8ad6cc1345b",
     "docs/tools/patient-list-generator-guide.md": "f358a23e9ab2c8ba82ad60787d0280ed4b543d110b2e413077db8ff732faae10",
     "docs/usage/python.md": "1ac1dd09d9fb636b515de8bd0e9c6d2b1bbba8c2579cb77c9beedae07ea421cd",
     ".github/workflows/docs.yml": "f3e94788c1bf03842880eeaae05014a8f72befafb21061a888e8e9d5dc20abd9",
@@ -126,6 +126,7 @@
     "spec/semantics/archive/mirai-id-cci-v1-20260923.json": "462fe404950ebe51e42c054d3819ce78f4aec34d9191050b9f5735817dd23e45",
     "spec/semantics/evidence/cci-category-screening-20261013.json": "4cc542dd42acfdc41d5c28db4c312cc09c7ba1e25b76c0f661545c97871a65ef",
     "src/open_dpc/semantics/comorbidity/definitions/archive/mirai-id-cci-v1-20260923.json": "462fe404950ebe51e42c054d3819ce78f4aec34d9191050b9f5735817dd23e45",
-    "tests/test_cci_categories.py": "fb743c5c611809503a9e791cd019f9a647b3e760a098c1f34ac31b5b4da94113"
+    "tests/test_cci_categories.py": "fb743c5c611809503a9e791cd019f9a647b3e760a098c1f34ac31b5b4da94113",
+    "extraction/Export-Tree.bat": "f8c269dd0f3f35e5387006effb37875c4027ad622e48e0f6742d0746ffa77ac6"
   }
 }

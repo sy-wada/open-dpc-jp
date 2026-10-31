@@ -10,6 +10,8 @@ The default DPC file encoding is cp932, delimiter is tab, and the date margin is
 
 The PowerShell wrapper is an alternative fast implementation. It must pass the same synthetic contract checks before release; the Python and PowerShell outputs should be compared for the same input and options.
 
+`Export-Tree.bat` lists a local folder. Drag a folder onto the file, or pass the folder path as the first argument. It writes `<folder-name>_tree.txt` beside that folder, with each entry and file size. The listing can contain local names, so keep it with the source folder and do not upload it. It does not extract DPC files.
+
 Filename matching is case-insensitive for FF1/EFn/EFg and `.txt`. The third
 underscore-separated token accepts YYMM (interpreted as 20YYMM) or YYYYMM,
 including suffixes such as `2504-1`, `202504-1`, `2504_1` and `202504_1`.
